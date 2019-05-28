@@ -1,0 +1,536 @@
+.box-announcement {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    border-radius: 6px;
+    border: 2px solid #bdc3c7;
+    margin-top: 5%;
+
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.myTable {
+    font-size: 14px;
+    color: #000;
+}
+
+.box-announcement .announcement-title {
+    width: 100%;
+    height: 80px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #1e2b3a;
+    background: #1e2b3a;
+    background-color: #e50006; /* For browsers that do not support gradients */
+}
+
+.box-announcement .announcement-title h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box-announcement .announcement-now-box {
+    width: 100%;
+    height: 300px;
+    min-height: 200px;
+    margin-top: 2%;
+    padding: 2%;
+
+    overflow-x: hidden;
+}
+
+.box-announcement .announcement-now-box h2 {
+    color: #000000;
+    font-weight: bold;
+}
+
+.announcement-now-box .announcement-all {
+    width: 100%;
+    height: auto;
+
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    opacity: 0;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(226,226,226,0.1);
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(220,220,220,0.8);
+  outline: 1px solid slategrey;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.announcement-all p {
+    color: #000000;
+    font-size: 1vw;
+}
+
+/* Event */
+.event-box {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    margin-top: 2%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 2px solid #bdc3c7;
+    margin-bottom: 5%;
+}
+
+.event-box .event-box-news {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #1e2b3a;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #e50006; /* For browsers that do not support gradients */
+
+}
+
+.event-box .event-box-news h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.event-box-news .event-box-now {
+    width: 100%;
+    height: 220px;
+    padding: 2%;
+    margin-top: -5px;
+
+    overflow-x: hidden;
+}
+
+.event-box-now h2 {
+    color: #000000;
+    font-size: 1.5vw;
+    font-weight: bold;
+
+}
+
+.event-box-now .event-all {
+    width: 100%;
+    height: auto;
+}
+
+.event-all p {
+    color: #000000;
+    font-size: 1vw;
+}
+
+/* Event List */
+
+.event-list {
+    width: 100%;
+    height: auto;
+    border: 2px solid #bdc3c7;
+    margin-top: -300px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.event-title-box {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #e50006; /* For browsers that do not support gradients */
+    border: 1px solid #1e2b3a;
+}
+
+.event-title-box h4 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.event-list .event-list-box {
+    width: 100%;
+    height: auto;
+    margin-top: 4%;
+}
+
+.data-event {
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    border-bottom: 3px solid #bdc3c7;
+}
+
+.date-event {
+    width: 100%;
+    height: auto;
+}
+
+.date-event h2 {
+    font-size: 4vw;
+    margin-left: 10px;
+}
+
+.date-event p {
+    margin-top: -20px;
+    color: #000000;
+    text-align: center;
+}
+
+.date-event-announ {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.date-event-announ h4 {
+    margin-top: -10px;
+    font-size: 1vw;
+    text-align: justify;
+}
+
+.date-event-announ p {
+    font-size: 0.8vw;
+    color: #000000;
+}
+
+.happybirthday-date {
+    margin-top: 5%;
+    width: 100%;
+    padding: 2%;
+    height: auto;
+}
+
+.happybirthday-date h2 {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #000000;
+}
+
+.happybirthday-date .img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.happybirthday-date .img-box img {
+    border-radius: 25%;
+}
+
+.happybirthday-date h3 {
+    text-align: center;
+    color: #000000;
+}
+
+.happybirthday-date h4 {
+    text-align: center;
+    color: #000000;
+}
+
+.happybirthday-date h5 {
+    text-align: center;
+    color: #000000;
+}
+
+/* Gallery */
+
+.gallery {
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.gallery h2 {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #000000;
+}
+
+.gallery .image-box-gallery {
+    width: 100%;
+    margin-top: 2%;
+    height: 250px;
+}
+
+.gallery .image-box-gallery img {
+    width: 100%;
+    height: 250px !important;
+    display: block;
+}
+
+/* Latest video */
+
+.latest-video {
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.latest-video h2 {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #000000;
+}
+
+.latest-video p {
+    color: #000000;
+}
+
+.latest-video h4 {
+    color: #000000;
+    font-weight: bold;
+}
+
+.big-video {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+}
+
+.small-video {
+    width: 100%;
+    max-width: 200px;
+    max-height: 100px;
+    height: auto;
+
+}
+
+.video-play-gallery {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.text-play-gallery {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+
+}
+
+.pembatas {
+    width: 100%;
+    height: 17px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .happybirthday-date {
+        margin-top: 5%;
+        width: 100%;
+        height: auto;
+    }
+
+    .happybirthday-date h2 {
+        font-size: 5vw;
+        font-weight: bold;
+        text-align: center;
+        color: #000000;
+    }
+
+    .happybirthday-date .img-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        min-width: 200px;
+        min-height: 200px;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .happybirthday-date .img-box img {
+        width: 100%;
+        height: 100%;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 0%;
+    }
+
+    .happybirthday-date h3 {
+        text-align: center;
+        color: #000000;
+        font-size: 4vw;
+    }
+
+    .happybirthday-date h4 {
+        text-align: center;
+        color: #000000;
+        font-size: 4vw;
+    }
+
+    .box-announcement .announcement-title h1 {
+        font-size: 5vw;
+    }
+
+    .box-announcement .announcement-now-box h2 {
+        font-size: 5vw;
+    }
+
+    .announcement-all p {
+        font-size: 4vw;
+    }
+
+    .event-box .event-box-news h1 {
+        font-size: 5vw;
+    }
+
+    .event-box-now h2 {
+        font-size: 5vw;
+    }
+
+    .event-all p {
+        font-size: 4vw;
+    }
+
+    .calendar {
+        width: 100%;
+    }
+
+    .date-event h2 {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .date-event p {
+        font-size: 5vw;
+    }
+
+    .date-event-announ h4 {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .date-event-announ p {
+        font-size: 3vw;
+        text-align: center;
+        border-bottom-color: 1px solid #f1f1f1;
+    }
+
+    .latest-video h2 {
+        font-size: 4vw;
+    }
+
+    .latest-video {
+        margin-top: 10%;
+        width: 100%;
+        height: auto;
+        padding: 2%;
+    }
+
+    .gallery h2 {
+        font-size: 8vw;
+        font-weight: bold;
+        color: #000000;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+/*!
+@fullcalendar/daygrid v4.0.1
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+.fc-dayGridDay-view .fc-content-skeleton, .fc-dayGridWeek-view .fc-content-skeleton {
+    padding-bottom: 1em
+}
+
+.fc-dayGrid-view .fc-body .fc-row {
+    min-height: 4em
+}
+
+.fc-row.fc-rigid {
+    overflow: hidden
+}
+
+.fc-row.fc-rigid .fc-content-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.fc-day-top.fc-other-month {
+    opacity: .3
+}
+
+.fc-dayGrid-view .fc-day-number, .fc-dayGrid-view .fc-week-number {
+    padding: 2px
+}
+
+.fc-dayGrid-view th.fc-day-number, .fc-dayGrid-view th.fc-week-number {
+    padding: 0 2px
+}
+
+.fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+    float: right
+}
+
+.fc-rtl .fc-dayGrid-view .fc-day-top .fc-day-number {
+    float: left
+}
+
+.fc-ltr .fc-dayGrid-view .fc-day-top .fc-week-number {
+    float: left;
+    border-radius: 0 0 3px
+}
+
+.fc-rtl .fc-dayGrid-view .fc-day-top .fc-week-number {
+    float: right;
+    border-radius: 0 0 0 3px
+}
+
+.fc-dayGrid-view .fc-day-top .fc-week-number {
+    min-width: 1.5em;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: grey
+}
+
+.fc-dayGrid-view td.fc-week-number {
+    text-align: center
+}
+
+.fc-dayGrid-view td.fc-week-number > * {
+    display: inline-block;
+    min-width: 1.25em
+}

@@ -1,0 +1,90 @@
+.advertisment-box {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/pemisah.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100% 100%; /* Resize the background image to cover the entire container */
+}
+
+.advertisment-box .boxTitle h2 {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 50px;
+}
+
+.advertisment-box .office-box h5 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.advertisment-box .office-box i{
+  color: #ffffff;
+}
+
+.advertisment-box .office-box {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.advertisment-box .box-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+
+.advertisment-box .box-image .object-fit_scale-down {
+  object-fit: fill;
+}
+
+.advertisment-box .box-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.office-box .logo i {
+  color: #ffffff;
+  font-size: 60px;
+  padding: 25px 10px 10px 10px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .advertisment-box .box-image {
+    width: 100%;
+    margin-top: 4%;
+    height: auto;
+  }
+
+  .slideempat {
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    font-weight: bold;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* margin-bottom: 5%; */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

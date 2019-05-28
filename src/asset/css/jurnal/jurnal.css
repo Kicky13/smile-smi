@@ -1,0 +1,424 @@
+.banner-jurnal {
+  width: 100%;
+  height: auto;
+  border: 2px solid #bdc3c7;
+  margin-top: 5%;
+
+  border-radius: 6px;
+}
+
+.banner-jurnal .banner-title {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #bdc3c7;
+  background: #e50006;
+}
+
+.banner-jurnal .banner-title h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.banner-jurnal .magazine-box {
+  margin-top: 3%;
+  width: 100%;
+  padding: 1%;
+  height: auto;
+}
+
+.banner-jurnal .magazine-box .magazine-image-box {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.banner-jurnal .magazine-box .magazine-image-box img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: fill;
+  height: auto;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+/*  */
+
+.magazine-page {
+  width: 100%;
+  height: 100%;
+  min-height: auto;
+  padding: 1%;
+}
+
+.magazine-page .magazine-page-box {
+  border-radius: 6px;
+  background-color: #e50006;
+  width: 100%;
+  height: 100%;
+  min-height: 60px;
+}
+
+/* Magazine list */
+
+.magazine-list {
+  margin-top: -350px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #bdc3c7;
+}
+
+.magazine-list .magazine-title {
+  color: #ffffff;
+  text-align: center;
+  background: #e50006;
+  border: 1px solid #000000;
+}
+
+.magazine-list .magazine-box {
+  width: 100%;
+  height: auto;
+  margin-top: 8%;
+  padding: 2%;
+}
+
+.magazine-list .magazine-box .magazine-list-box {
+  width: 100%;
+  height: auto;
+}
+
+.magazine-list-box .magazine {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8%;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.magazine img {
+  height: 202px;
+  width: 100%;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.magazine .title-magazine {
+  color: #000000;
+  font-size: 0.8vw;
+  font-weight: bold;
+}
+
+.magazine-love {
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+}
+
+.magazine-love p {
+  color: #000000;
+  font-size: 0.67vw;
+}
+
+.magazine-love p i {
+  font-size: 15px;
+}
+
+.magazine .date-magazine {
+  width: 100%;
+  height: auto;
+}
+
+.magazine .date-magazine p {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Advertisment */
+.advertisment-jurnal {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  margin-top: 5%;
+}
+
+.advertisment-jurnal .adv {
+  width: 100%;
+
+  height: 200px;
+  min-height: 200px;
+}
+
+.advertisment-jurnal .adv img {
+  width: 100%;
+  height: 300px;
+  min-height: 100px;
+}
+
+/* Newspaper jurnal */
+
+.newspaper-jurnal {
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  height: auto;
+}
+
+.video-play {
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+  max-width: 250px;
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.newspaper-jurnal h2 {
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 4px solid #e50006;
+  width: 18%;
+  min-width: 100px;
+  margin-bottom: 2%;
+}
+
+.newspaper-jurnal .newspaper {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  margin-top: 5%;
+}
+
+.newspaper-jurnal .newspaper img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+/*
+.newspaper .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.ehover .image-news {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+} */
+
+.BoxFiller {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.BoxImg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.BoxOverlay h4 {
+  padding-left: 2%;
+}
+
+.BoxOverlay h5 {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.BoxOverlay {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  color: #fff;
+  border-top: 1px solid #e50006;
+  background-color: #e50006;
+}
+
+.newspaper .image-news {
+  display: block;
+  width: 100%;
+}
+
+.overlay-newspaper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #00000060;
+}
+
+.newspaper:hover .overlay-newspaper {
+  opacity: 1;
+}
+
+.overlay-newspaper .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2%;
+}
+
+.text i {
+  font-size: 2vw;
+  background: #e50006;
+  border-radius: 20px;
+  padding: 10%;
+}
+
+.calendar {
+  width: 100%;
+  height: auto;
+}
+
+.calendar .calendar-date-now {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  background-color: #e50006; /* For browsers that do not support gradients */
+  padding: 5%;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.calendar .calendar-date-now p {
+  color: #ffffff;
+}
+
+.calendar p {
+  color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-jurnal .banner-title {
+    width: 100%;
+    height: auto;
+    border: 1px solid #bdc3c7;
+    background: #1e2b3a;
+  }
+  .banner-jurnal .banner-title h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: bold;
+  }
+
+  /* Advertisment */
+  .advertisment-jurnal {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+  }
+
+  .advertisment-jurnal .adv {
+    width: 100%;
+    margin-top: 5%;
+    height: 500px;
+  }
+
+  .advertisment-jurnal .adv img {
+    width: 100%;
+    height: 500px;
+    margin-top: 5%;
+  }
+
+  .magazine-list .magazine-title h2 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4vw;
+  }
+
+  .magazine img {
+    height: 400px;
+    width: 100%;
+    object-fit: fill;
+    object-position: 50% 50%; /* default value: image is centered*/
+    object-position: 0 0; /* positioned top left of the content box */
+  }
+
+  .magazine .title-magazine {
+    color: #000000;
+    font-size: 4vw;
+    font-weight: bold;
+  }
+  .magazine .date-magazine p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 4vw;
+  }
+
+  .magazine-love p {
+    color: #000000;
+    font-size: 4vw;
+  }
+
+  .magazine-love p i {
+    font-size: 4vw;
+    color: #000000;
+  }
+
+  .newspaper-jurnal h2 {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #000000;
+    border-bottom: 4px solid #e50006;
+    width: 20%;
+    min-width: 100px;
+    margin-bottom: 5%;
+  }
+  .newspaper-jurnal .newspaper {
+    width: 100%;
+
+    margin-top: 5%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

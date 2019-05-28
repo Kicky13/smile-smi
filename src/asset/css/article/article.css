@@ -1,0 +1,919 @@
+.delimiter {
+  width: 100%;
+  height: 100px;
+}
+
+.article-judul {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+}
+
+.article-judul h1 {
+  font-size: 2.5vw;
+  color: #000000;
+  font-weight: bold;
+}
+
+.article-judul h1 a {
+  font-size: 1.5vw;
+  background: #87dccc;
+  padding: 0.5%;
+  border-radius: 6px;
+  color: #ffffff;
+}
+.article-judul h1 a:hover {
+  font-size: 1.5vw;
+  padding: 0.5%;
+  border-radius: 6px;
+  color: #ffffff !important;
+}
+.notice {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  margin-top: -4%;
+}
+
+.notice .nama-notice {
+  width: 100%;
+  padding: 1.5% 1.5% 0% 1.5%;
+  height: auto;
+}
+
+.notice p{
+  color: black;
+}
+
+.notice .nama-notice p {
+  font-size: 1vw;
+}
+
+.notice .date-comment-view {
+  width: 100%;
+  height: auto;
+  padding: 1.5% 1.5% 0% 1.5%;
+}
+
+.notice .date-comment-view p {
+  font-size: 1vw;
+  text-align: center;
+  padding: 1.5%;
+}
+
+.notice .date-comment-view p i {
+  font-size: 0.8vw;
+}
+
+.image-box {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.image-BannerHead {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+.image-BannerHead img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.description {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+.description p {
+  color: #000000;
+  font-size: 1vw;
+  text-align: justify;
+}
+.description .desc-tag {
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  line-height: 26pt;
+}
+
+.description .desc-tag a {
+  background: #978e8e;
+  border-radius: 6px;
+  padding: 1%;
+  font-size: 0.8vw;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.description .desc-tag a:hover {
+  color: #ffffff;
+}
+
+.comment {
+  padding: 1%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1%;
+}
+.comment h3 {
+  font-size: 1.5vw;
+  color: #000000;
+  border-bottom: 4px solid #87daad;
+  width: 10.5%;
+}
+
+.comment .comment-box {
+  width: 100%;
+  height: 100%;
+  min-height: auto;
+  margin-top: 1%;
+  border-bottom: 3px solid rgba(189, 195, 199, 1);
+}
+
+.comment-box .icon {
+  max-width: 50px;
+  max-height: 50px;
+  /* background: #3d4b5b; */
+}
+
+.comment-box .icon img{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.comment .comment-box i {
+  font-size: 4vw;
+  margin: 0 auto;
+  display: block;
+}
+
+.comment .comment-box p {
+  /* background: #000000; */
+  font-size: 1vw;
+}
+
+.comment .comment-box .name-time {
+  width: 100%;
+  height: auto;
+  margin-top: 1%;
+  /* border: 1px solid #000000; */
+  display: inline-block;
+}
+
+.comment .comment-box .name-time p {
+  display: inline;
+  color: #000000;
+}
+
+.comment .comment-box .name-time .name {
+  float: left;
+}
+
+.comment .comment-box .name-time .time {
+  float: right;
+}
+
+.comment .comment-box .comment-section {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+}
+
+.comment .comment-box .comment-section p {
+  color: #000000;
+  font-size: 0.8vw;
+  text-align: left;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.comment .comment-box .comment-deliminter {
+  width: 100%;
+  height: auto;
+}
+
+.comment .comment-box .comment-deliminter p {
+  float: right;
+  color: #000000;
+  font-size: 0.8vw;
+  padding: 1%;
+}
+
+/* Input comment */
+
+.input-comment {
+  width: 100%;
+  padding: 1%;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.input-comment p {
+  color: #000000;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.input-comment .form {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  margin-bottom: 1%;
+}
+
+.input-comment button {
+  background: #e50006;
+  color: #ffffff;
+}
+
+/* Trending */
+
+.trending-now {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.trending-now p {
+  font-size: 2vw;
+  color: #000000;
+  font-weight: bold;
+}
+
+.trending-now .box-trending .img-trending {
+  border-radius: 5% 5% 5% 5%;
+  width: 100%;
+
+  max-width: 350px;
+  max-height: 350px;
+  min-height: 200px;
+  min-width: 250px;
+  object-fit: cover;
+  object-position: 100% 100%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+/* trending overlay */
+.trending-now .box-trending {
+  border-radius: 5% 5% 5% 5%;
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  min-height: 200px;
+  min-width: 250px;
+  position: relative;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.box-trending:hover .overlay-article.to-top {
+  border-radius: 5% 5% 5% 5%;
+  top: 0;
+}
+
+.overlay-article {
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 1s ease;
+  top: 0; */
+  border-radius: 5% 5% 5% 5%;
+  position: absolute;
+  top: 0;
+  padding: 2%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e50006;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: 700px;
+  overflow: hidden;
+  /* padding: 2%; */
+  /* text-align: justify; */
+  /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
+  width: 100%;
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+.box-trending:hover .overlay-article {
+  height: 100%;
+  padding: 2%;
+}
+.box-trending .overlay-article.to-top {
+  top: 70%;
+}
+.overlay-article .title-article {
+  font-size: 0.9vw;
+  color: #ffffff;
+}
+
+.overlay-article .date-article {
+  font-size: 0.7vw;
+  color: #fff;
+}
+
+/*
+.item-overlay-article {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 700px;
+  overflow: hidden;
+  padding: 2%;
+  text-align: justify;
+  /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
+/*width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+*/
+
+/*
+.item-overlay-article .button-overlay {
+  width: 25%;
+}
+
+.item-overlay-article .button-overlay p {
+  color: #000000;
+  margin: 0 auto;
+  display: block;
+}
+
+.item-overlay-article .button-overlay:hover {
+  background: #e50006;
+}
+
+.item-overlay-article .button-overlay p:hover {
+  color: #ffffff;
+} */
+
+/*  */
+
+/* Overlay like article */
+
+.news-other .box-news {
+
+  border-radius: 5%;
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  min-height: 200px;
+  min-width: 250px;
+  position: relative;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.box-news:hover .overlay-article-like.to-top-like {
+  top: 0;
+}
+
+.overlay-article-like {
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 1s ease;
+  top: 0; */
+  position: absolute;
+  border-radius: 5%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e50006;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: 700px;
+  overflow: hidden;
+  padding: 2%;
+  /* padding: 2%; */
+  /* text-align: justify; */
+  /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
+  width: 100%;
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+.box-news:hover .overlay-article-like {
+  height: 100%;
+  width: 100%;
+}
+.box-news .overlay-article-like.to-top-like {
+  top: 70%;
+}
+
+.overlay-article-like .title-like {
+  font-size: 0.8vw;
+  color: #ffffff;
+}
+
+.overlay-article-like .date-like {
+  font-size: 0.7vw;
+  color: #fff;
+}
+
+/*  */
+
+.news-other {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+}
+
+.news-other p {
+  font-size: 2vw;
+  color: #000000;
+  font-weight: bold;
+}
+
+.news-other .box-news {
+  border-radius: 5%;
+  width: 100%;
+  max-width: 220px;
+  max-height: 150px;
+  min-height: 200px;
+  min-width: 250px;
+  position: relative;
+  object-fit: fill;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+.news-other .box-news .img-news {
+  border-radius: 5%;
+  width: 100%;
+  max-width: 220px;
+  max-height: 150px;
+  min-height: 200px;
+  min-width: 250px;
+  object-fit: cover;
+  object-position: 50% 50%; /* default value: image is centered*/
+  object-position: 0 0; /* positioned top left of the content box */
+}
+
+/* Category */
+
+.category {
+  padding: 2%;
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+  margin-top: 10%;
+}
+
+.category p {
+  color: #000000;
+  font-size: 1.5vw;
+  border-bottom: 4px solid #e50006;
+  width: 20%;
+  font-weight: bold;
+}
+
+.category .list-category a {
+  color: #000000;
+  display: block;
+  font-size: 1.2vw;
+  margin-top: 1%;
+}
+
+/* VIdeo Article */
+.video-article {
+  width: 100%;
+  padding: 2%;
+  height: auto;
+
+  margin-top: 2%;
+}
+
+.video-article p {
+  font-size: 1.4vw;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 4px solid #e50006;
+  width: 28%;
+}
+
+.video-article .video-play {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+
+.video-article .video-play-two {
+  width: 100%;
+  margin-top: 10%;
+  height: auto;
+}
+
+.advertisment {
+  width: 100%;
+  margin-top: 2%;
+  height: auto;
+}
+
+.advertisment img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Recent Comment */
+
+.recent-comment {
+  padding: 1%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1%;
+}
+.recent-comment h3 {
+  font-size: 1.5vw;
+  color: #000000;
+  border-bottom: 4px solid #e50006;
+  width: 40%;
+  font-weight: bold;
+}
+
+.recent-comment .comment-box {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  margin-top: 1%;
+  border-bottom: 3px solid rgba(189, 195, 199, 1);
+}
+
+.recent-comment .comment-box .icon {
+  width: 100%;
+  min-width: 80px;
+  height: 100%;
+  min-height: 98px;
+  /* background: #3d4b5b; */
+}
+
+.recent-comment .comment-box i {
+  font-size: 3vw;
+  margin: 0 auto;
+  display: block;
+}
+
+.recent-comment .comment-box p {
+  /* background: #000000; */
+  font-size: 0.8vw;
+  margin-top: 1%;
+}
+
+.recent-comment .comment-box .name-time {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+  display: inline-block;
+}
+
+.recent-comment .comment-box .name-time p {
+  display: inline;
+  color: #000000;
+}
+
+.recent-comment .comment-box .name-time .name {
+  float: left;
+}
+
+.recent-comment .comment-box .name-time .time {
+  float: right;
+}
+
+.recent-comment .comment-box .comment-section {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+}
+
+.recent-comment .comment-box .comment-section p {
+  color: #000000;
+  font-size: 0.9vw;
+  text-align: justify;
+}
+
+.recent-comment .comment-box .comment-deliminter {
+  width: 100%;
+  height: auto;
+}
+
+.recent-comment .comment-box .comment-deliminter p {
+  float: right;
+  color: #000000;
+  font-size: 0.8vw;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  .article-judul h1 {
+    font-size: 5vw;
+  }
+
+  .article-judul h1 a {
+    font-size: 4vw;
+    background: #e50006;
+    padding: 1%;
+
+    border-radius: 6px;
+    color: #ffffff;
+  }
+  .article-judul h1 a:hover {
+    font-size: 4vw;
+    padding: 1%;
+    border: 2px solid #fff;
+  }
+
+  .notice .nama-notice p {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .notice .date-comment-view p {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .notice .date-comment-view p i {
+    font-size: 4vw;
+  }
+  .comment .comment-box {
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    margin-top: 1%;
+    border-bottom: 3px solid rgba(189, 195, 199, 1);
+  }
+
+  .comment .comment-box .icon {
+    width: 0%;
+    min-width: 0px;
+    height: 0%;
+    min-height: 0px;
+    /* background: #3d4b5b; */
+  }
+
+  .comment .comment-box i {
+    font-size: 4vw;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .comment .comment-box p {
+    /* background: #000000; */
+    font-size: 3.5vw;
+  }
+
+  .comment .comment-box .comment-section p {
+    color: #000000;
+    font-size: 4vw;
+    text-align: justify;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+
+  .category {
+    padding: 2%;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    margin-top: 15%;
+  }
+
+  .category p {
+    color: #000000;
+    font-size: 7vw;
+    border-bottom: 4px solid #87daad;
+    width: 40%;
+    font-weight: bold;
+  }
+
+  .category .list-category a {
+    color: #000000;
+    display: block;
+    font-size: 5vw;
+    margin-top: 1%;
+  }
+
+  .image-box {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 2%;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+  }
+  .description p {
+    color: #000000;
+    font-size: 4vw;
+    text-align: justify;
+  }
+  .description .desc-tag a {
+    background: rgba(210, 215, 211, 1);
+    padding: 1%;
+    border-radius: 6px;
+    font-size: 4vw;
+    color: #000000;
+  }
+
+  /* Comment */
+
+  .comment h3 {
+    font-size: 4vw;
+    color: #000000;
+    border-bottom: 4px solid #87daad;
+    width: 20%;
+  }
+
+  .input-comment p {
+    color: #000000;
+    font-size: 4vw;
+    font-weight: bold;
+  }
+
+  .trending-now p {
+    font-size: 4vw;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .trending-now .box-trending .img-trending {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    object-position: 50% 50%; /* default value: image is centered*/
+    object-position: 0 0; /* positioned top left of the content box */
+  }
+
+  /* trending overlay */
+  .trending-now .box-trending {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+
+  .overlay-article .title-article {
+    font-size: 3vw;
+    color: #ffffff;
+  }
+  .overlay-article .date-article {
+    font-size: 3vw;
+    color: #fff;
+  }
+
+  /* video */
+  .video-article p {
+    font-size: 7vw;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 4px solid #87daad;
+    width: 50%;
+  }
+
+  /* recent-comment */
+
+  .recent-comment h3 {
+    font-size: 5vw;
+    color: #000000;
+    border-bottom: 4px solid #87daad;
+    width: 50%;
+    font-weight: bold;
+  }
+
+  .recent-comment .comment-box {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    margin-top: 1%;
+    border-bottom: 3px solid rgba(189, 195, 199, 1);
+  }
+
+  .recent-comment .comment-box .icon {
+    width: 0%;
+    min-width: 0px;
+    height: 0%;
+    min-height: 0px;
+    /* background: #3d4b5b; */
+  }
+
+  .recent-comment .comment-box i {
+    font-size: 3vw;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .recent-comment .comment-box p {
+    /* background: #000000; */
+    font-size: 3vw;
+    margin-top: 1%;
+  }
+
+  .recent-comment .comment-box .name-time {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    display: inline-block;
+  }
+
+  .recent-comment .comment-box .name-time p {
+    display: inline;
+    color: #000000;
+  }
+
+  .recent-comment .comment-box .name-time .name {
+    float: left;
+  }
+
+  .recent-comment .comment-box .name-time .time {
+    float: right;
+  }
+
+  .recent-comment .comment-box .comment-section {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+  }
+
+  .recent-comment .comment-box .comment-section p {
+    color: #000000;
+    font-size: 4vw;
+    text-align: justify;
+  }
+
+  /* Also like */
+  .news-other .box-news {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .news-other .box-news .img-news {
+    width: 100%;
+    height: 300px;
+    min-width: 200px;
+    object-fit: fill;
+    object-position: 50% 50%; /* default value: image is centered*/
+    object-position: 0 0; /* positioned top left of the content box */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

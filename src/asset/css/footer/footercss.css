@@ -1,0 +1,234 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to left, #4ECCCE , #87DAAD);
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info .img-smile {
+  position: relative;
+  max-width: 30%;
+  height: auto;
+  margin-left: 100px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+#footer .img-group {
+  max-width: 75%;
+  height: auto;
+}
+
+#footer .footer-top .footer-info .img {
+  width: 100%;
+  height: 50px;
+}
+
+#footer .footer-top .footer-info h3 {
+  /* font-size: 34px; */
+  margin: 0 0 0 0;
+  padding: 0px 0 0px 0;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  color: #8c8c8c;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ecf5ff;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: transparent;
+  color: #8c8c8c;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: red;
+  color: #fff;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f2b2b;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#footer .footer-top h5 {
+  font-size: 14px;
+  color: #2f2b2b;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 10px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 0 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #2f2b2b;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #74b5fc;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
+}
+
+.footer-newsletter p {
+  font-size: 12px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+  background: #007bff;
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+  background: #0062cc;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#footer .copyright-text {
+  text-align: center;
+  padding-top: 32px;
+  color: #2f2b2b;
+  font-weight: 600;
+}
+
+#footer .copyright img {
+  float: right;
+  width: 60%;
+  height: 65px;
+  margin-top: 2%;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #f1f7ff;
+}
+
+#footer .credits a {
+  color: #bfddfe;
+}
+
+#footer .credits a:hover {
+  color: #f1f7ff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #footer .footer-top .footer-info .img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 80px;
+  }
+
+  #footer .img-group {
+    width: 60%;
+    height: 16px;
+  }
+
+  #footer .footer-top .footer-info .img-smile {
+    position: static;
+    max-width: 150px;
+    max-height: 90px;
+    margin-top: -15px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

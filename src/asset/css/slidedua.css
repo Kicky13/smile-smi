@@ -1,0 +1,439 @@
+.content-latest-news {
+  width: 100%;
+  height: auto;
+  /* padding: 1%; */
+  margin-top: -50px;
+  margin-bottom: 5%;
+}
+
+.content-tabs{
+  margin-top: -75px;
+}
+
+.content-latest-news h2 {
+  /* font-size: 40px; */
+  font-size: 2vw;
+  font-weight: bold;
+  color: #000000;
+}
+.content-latest-news h3 {
+  /* font-size: 40px; */
+  /* font-weight: bold; */
+  color: #000000;
+}
+
+.italic-style{
+  font-style: italic;
+}
+
+button {
+  float: right;
+  width: 150px;
+  font-size: 12px;
+  height: 40px;
+}
+
+/* Overlay */
+
+.news-box:hover .item-overlay.top {
+  top: 0;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700px;
+  overflow: hidden;
+  padding: 2%;
+  text-align: justify;
+  /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
+  width: 100%;
+
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+.item-overlay.top {
+  top: 63%;
+}
+
+.item-overlay p {
+  color: #ffffff;
+  font-size: 1vw;
+}
+
+.spoiler-slidetwo {
+  margin-top: 10%;
+  text-align: justify;
+  font-size: 12px;
+}
+
+/* .view-more p {
+  color: #000000;
+  margin: 0 auto;
+  display: block;
+} */
+
+.view-more:hover {
+
+  background-image: linear-gradient(to left, #4ECCCE , #87DAAD);
+
+}
+
+.view-more p:hover {
+  color: #ffffff;
+}
+
+.view-more {
+  width: 40;
+  min-width: 100px;
+  /* background: #e50006; */
+  border-radius: 10px;
+}
+
+.view-more p {
+  color: #000000;
+}
+.view-text {
+  color: #000000;
+  font-size: 1vw;
+}
+
+.BtnSide{
+  margin-top: 20px;
+}
+
+.BtnSideWhat{
+  margin-top: 15px;
+}
+
+.content-latest-news .news-box:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.news-box img {
+  width: 100%;
+  min-height: 300px;
+  height: 370px;
+  /* border: 1px solid #000000; */
+}
+
+.content-latest-news .news-box {
+  position: relative;
+  border-radius: 10px;
+  float: left;
+  margin-top: 4%;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.item-overlay h4 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: -10px;
+  /* font-size: 12px; */
+}
+
+/*  */
+.content-latest-news .news-box-two {
+  width: 100%;
+  border-radius: 10px;
+  height: 198px;
+  /* border: 1px solid #000000; */
+  margin-bottom: 1%;
+}
+.content-news {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+  margin-bottom: 5%;
+}
+
+.content-news .news-box {
+  width: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+/*  */
+
+.menu-tabs {
+  margin-top: 5%;
+
+}
+
+.menu-tabs .nav-item a {
+  color: #000000;
+  font-size: 16px;
+}
+
+.menu-tabs .nav-item a:active{
+  background-color: #e50006;
+}
+
+.menu-tabs .nav-item-default a {
+  color: white;
+  background-color: #e50006;
+  font-size: 16px;
+  border-bottom: 4px solid #e50006;
+  border-color: #eee #eee #ddd;
+}
+
+.nav-item:hover {
+  border-bottom: 4px solid #e50006;
+}
+/*  */
+
+.news {
+  width: 97%;
+  padding: 1%;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 2%;
+  height: auto;
+  /* border-bottom: 1px solid #e50006; */
+}
+
+.border-navitem:hover {
+  border-bottom: 2px solid #e50006;
+}
+
+.img-box {
+  /* border: 1px solid #000000; */
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
+  min-height: 150px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+.content-tabs {
+  display: inline-block;
+}
+.title-news {
+  width: 100%;
+  min-width: 200px;
+  height: 100%;
+  min-height: 10px;
+  text-align: left;
+  margin-left:20px;
+  /* border: 1px solid #000000; */
+}
+
+.title-news h4 {
+  font-weight: bold;
+  color: #000000;
+  font-size: 1vw;
+}
+
+.title-footer {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid #000000; */
+  color: #000000;
+}
+
+.title-footer .comment-eye p {
+  color: #000000;
+  font-size: 0.8vw;
+  margin-left: 20px;
+  display: inline;
+}
+
+.title-footer p i {
+  font-size: 0.8vw;
+  display: inline;
+  color: #000000;
+}
+.title-footer p {
+  color: #000000;
+}
+
+.title-footer a {
+  padding: 1.5%;
+  color: #000000;
+  background: #d2d7d3;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .item-overlay h4 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3vw;
+  }
+
+  .content-latest-news h2 {
+    font-size: 30px;
+
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+  }
+  .content-latest-news .news-box {
+    position: relative;
+    border-radius: 10px;
+    float: left;
+    margin-top: 4%;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    min-height: 300px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .news-box img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    /* border: 1px solid #000000; */
+  }
+
+  .item-overlay p {
+    color: #ffffff;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+
+  .menu-tabs {
+    margin-top: 5%;
+  }
+
+  .menu-tabs .nav-item a {
+    color: #000000;
+    font-size: 2.5vw;
+    margin-top: 5%;
+  }
+
+  .news {
+    width: 90%;
+    padding: 1%;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 2%;
+    height: auto;
+  }
+
+  .news .img-box {
+    width: 100%;
+    min-width: 100px;
+    height: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  .title-news h4 {
+    font-weight: bold;
+    color: #000000;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .title-footer {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    color: #000000;
+  }
+
+  .title-footer p {
+    color: #000000;
+    font-size: 15px;
+  }
+
+  .title-footer a {
+    padding: 1.5%;
+    color: #000000;
+    background: #d2d7d3;
+    border-radius: 10px;
+    margin-left: 2px;
+  }
+  button {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+  }
+  .title-news {
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    /* border: 1px solid #000000; */
+  }
+  .nav-item {
+    margin-left: 15px;
+  }
+
+  .view-more {
+    width: 40%;
+    height: 35px;
+    /* background: #e50006; */
+    border-radius: 10px;
+  }
+
+  .view-more p {
+    color: #000000;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .view-more:hover {
+    background: #e50006;
+  }
+
+  .view-more p:hover {
+    color: #ffffff;
+  }
+
+  .title-footer p i {
+    font-size: 3vw;
+    display: inline;
+    color: #000000;
+  }
+  .title-footer .comment-eye p {
+    color: #000000;
+    font-size: 3vw;
+
+    display: inline;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .img-box {
+    /* border: 1px solid #000000; */
+    width: 100%;
+    height: 130px;
+    margin-right: 10%;
+  }
+}

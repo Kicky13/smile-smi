@@ -1,0 +1,331 @@
+.nav-brand {
+  max-width: 90%;
+  height: auto;
+  margin-top: -10px;
+}
+
+.PopoverNav {
+  /*background-color: #e50006;*/
+  margin-top: 5px;
+  background-image: linear-gradient(to left, #4ECCCE , #59cfc8) !important;
+  color: white;
+  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.11), 0 0px 0px rgba(255, 255, 255, 0.08);
+}
+
+.PopoverNav:hover{
+  background-image: linear-gradient(to left, #4ECCCE , #59cfc8) !important;
+}
+
+.PopoverLayer {
+  background-image: linear-gradient(to left, #4ECCCE , #59cfc8) !important;
+  width: 150px;
+}
+
+.PopoverHead {
+  background-image: linear-gradient(to left, #4ECCCE , #59cfc8) !important;
+}
+
+.h4white {
+  color: white;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #87daad;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: inherit;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn i {
+  display: inline;
+}
+
+.dropdown-content {
+  background: #f9f9f9;
+  min-width: 160px;
+  position: absolute;
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background: #bada55;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logo-nav i {
+  color: #ffffff;
+  font-size: 30px;
+  padding: 25px 10px 10px 10px;
+}
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400, 700");
+
+@-moz-keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.navbar-custom {
+  margin-bottom: 0;
+}
+
+/**recently added*************/
+.navbar-custom .navbar-brand .navbar-toggle {
+  padding: 4px 6px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+  outline: 0;
+}
+
+.navbar-custom .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+  outline: 0;
+  background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+  outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-custom .nav li.active a:hover {
+  color: #fff;
+}
+
+/*************boundary ends here*************/
+.navbar-custom a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1vw;
+  border-radius: 10px;
+}
+
+.navbar-custom .nav li a:hover {
+  outline: 0;
+  color: #87daad;
+  border-radius: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+  outline: 0;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.glyphicon {
+  font-size: 25px;
+  color: white;
+}
+
+.intro-section .brand-heading {
+  font-size: 100px;
+  color: white;
+  margin-top: 50px;
+}
+
+/***********************************************/
+.intro-section .intro-text {
+  font-size: 28px;
+  color: #fff;
+}
+
+@media (min-width: 767px) {
+  .navbar-custom {
+    padding: 25px 0;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    background: 0 0;
+  }
+
+  .navbar-custom.top-nav-collapse {
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-right: 50px;
+    background-color: red;
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, #4eccce, #87daad);
+    opacity: 1;
+  }
+
+  .navbar-fixed-top.navbar-shrink {
+    padding: 10px 0;
+  }
+
+  img {
+    display: inline;
+    width: 100%;
+  }
+
+  /****Jaduaye line hai ye ********/
+  section {
+    padding: 375px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 0%;
+    height: 0%;
+    min-height: 0px;
+    display: inline;
+  }
+
+  .navbar-custom a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 4vw;
+  }
+
+  .material-icons {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    /* background: #000; */
+  }
+}
+
+/**landscape mode ******************/
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {}

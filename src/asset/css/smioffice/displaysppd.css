@@ -1,0 +1,104 @@
+.user-sppd {
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.user-sppd h3{
+  color: black;
+}
+
+.user-sppd h5{
+  color: black;
+}
+
+.Actionsppd {
+  height: auto;
+  max-width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
+.TambahSppd{
+  margin-top: 20px;
+}
+
+.cardHistory {
+  background: #F5F5F5;
+}
+
+.cardHistory p{
+  color: black;
+}
+
+.circle:before {
+  content: ' \25CF';
+  font-size: 50px;
+  color: red;
+}
+
+.circle-sppd:before {
+  content: ' \25CF';
+  font-size: 50px;
+  color: blue;
+}
+
+.cardTitle {
+  color: black;
+  margin-top: -50px;
+  margin-left: 40px;
+  margin-bottom: 5px;
+}
+
+.tanggal-card {
+  margin-top: -20px;
+  margin-left: 40px;
+  font-size: 10px;
+}
+
+.bottom-card {
+  margin-left: 30px;
+}
+
+.Donutchart {
+  position: relative;
+  margin-left: 100px;
+  margin-top: -50px;
+}
+
+.user-sppd .table > thead > tr > th {
+  color: rgba(0, 0, 0);
+}
+
+.user-sppd .table > tbody > tr > td {
+  color: black !important;
+}
+
+.telepon .table p{
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

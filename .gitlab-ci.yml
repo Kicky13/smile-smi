@@ -1,0 +1,19 @@
+image: registry.gitlab.com/directoryx/smile-sisi:latest
+
+stages:
+  - deploy
+
+cache:                  
+  paths:                
+    - node_modules/     
+  key: "$CI_BUILD_REPO" 
+
+deploy-prod:
+  stage: deploy
+  only:
+    - master
+  script:
+    - npm install
+    - CI=false npm run build && sw-precache --config=sw-precache-config.js
+    - firebase use testing-3aa39 --token $FIREBASE_TOKEN
+    - firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN

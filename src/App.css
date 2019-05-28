@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  filter: blur(50px);
+  transition: all 1s;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*shimmer loading */
+/*<section>
+  <article class="background">
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    <div class="e"></div>
+    <div class="f"></div>
+    <div class="g"></div>
+    <div class="h"></div>
+    <div class="i"></div>
+    <div class="j"></div>
+    <div class="k"></div>
+    <div class="l"></div>
+  </article>
+</section>*/
+
+body {
+  background-color: #e9ebee;
+    color: #1d2129;
+    direction: ltr;
+    line-height: 1.34;
+}
+
+.background {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+    background: #f6f7f9;
+    background-image: linear-gradient(to right, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px;
+    height: 104px;
+    position: relative;
+}
+section{
+  padding: 12px;
+  max-width: 476px;
+  height: 300px;
+  margin: 4rem auto;
+  background-color: #fff;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+
+}
+
+.background div {
+    background: #fff;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+div.a {
+    height: 40px;
+    left: 40px;
+    right: auto;
+    top: 0;
+    width: 8px;
+}
+
+div.b {
+    height: 8px;
+    left: 48px;
+    top: 0;
+}
+div.c {
+    left: 136px;
+    top: 8px;
+}
+div.d {
+    height: 12px;
+    left: 48px;
+    top: 14px;
+}
+div.e {
+    left: 100px;
+    top: 26px;
+}
+div.f {
+    height: 10px;
+    left: 48px;
+    top: 32px;
+}
+div.g {
+    height: 20px;
+    top: 40px;
+}
+div.h {
+    left: 410px;
+    top: 60px;
+}
+div.i {
+    height: 13px;
+    top: 66px;
+}
+div.j {
+    left: 440px;
+    top: 79px;
+}
+div.k {
+    height: 13px;
+    top: 85px;
+}
+div.l {
+    left: 178px;
+    top: 98px;
+}
+
+@keyframes placeHolderShimmer{
+
+0% {
+    background-position: -468px 0;
+}
+100% {
+    background-position: 468px 0;
+}
+}
+
+
+/*blur Effect for Load Image*/
+
+/*<ProgressiveImage
+    preview={logo}
+    src={logo}
+    render={(src, style) => <img src={src} style={style}  />}
+/>*/
+
+.blur {
+      filter: blur(50px);
+      transition: all 1s;
+    }
+    .noblur {
+      transition: all 1s;
+    }

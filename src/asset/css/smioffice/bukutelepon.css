@@ -1,0 +1,41 @@
+.telepon {
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+}
+
+.telepon h3{
+  border-bottom: 4px solid #e50006;
+  max-width: 160px;
+}
+
+.telepon .table > thead > tr > th {
+  color: rgba(0, 0, 0) !important;
+}
+
+.telepon .table > tbody > tr > td {
+  color: black !important;
+}
+
+.telepon .table p{
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
