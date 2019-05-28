@@ -230,7 +230,7 @@ class Tab3 extends React.Component {
                               <p>
                                 {" "}
                                 <i className="material-icons">comment</i>
-                                &nbsp; 0
+                                &nbsp; {anObjectMapped.comment}
                               </p>
                             </div>
 

@@ -52,8 +52,12 @@ class DisplayGallery extends React.Component {
       <br />
       <br />
         <div className="gallery">
-          <h4>SMI Gallery . Video</h4>
-          <h3><b>Video</b></h3>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT}>Home</NavLink></li>
+              <li class="breadcrumb-item active" aria-current="page">List Video</li>
+            </ol>
+          </nav>
           <div className="">
             <div className="row">
               {/*  */}
@@ -74,7 +78,7 @@ class DisplayGallery extends React.Component {
                               <h4><b>{anObjectMapped.judul}</b></h4>
                           </div>
                           <div className="video-love">
-                            400x Ditonton . 1 Bulan yang lalu
+                            <Moment format="D MMM YYYY">{anObjectMapped.date}</Moment>
                           </div>
                     </div>
                   </div>

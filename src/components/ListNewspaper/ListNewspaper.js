@@ -11,7 +11,7 @@ class ListJurnal extends React.Component {
         super(props);
         this.state = {
             isOpen: false,
-            jurnal: []
+            newspaper: []
         };
         //this.handleLogout = this.handleLogout.bind(this);
     }
@@ -22,11 +22,11 @@ class ListJurnal extends React.Component {
             ] = `Bearer ${localStorage.getItem("jwt_token")}`;
         //latest article
         Http.get(
-            process.env.REACT_APP_SMILE_API + "sinergi/getallsinergy"
+            process.env.REACT_APP_SMILE_API + "newspaper/getlatestnewspaper"
         )
             .then(res => {
                 this.setState({
-                    jurnal: res.data.sinergyAll,
+                    newspaper: res.data.newspaper,
                 });
             })
             .catch(err => {
@@ -44,17 +44,17 @@ class ListJurnal extends React.Component {
             });
     }
     render() {
-        const journal = this.state.jurnal;
+        const newspaper = this.state.newspaper;
         return (
             <div>
 
             <div className="gallery" style={{marginTop:20}}>
-              <h4>SMI Jurnal . SINERGI</h4>
-              <h4><b>SINERGI</b></h4>
-              <div className="lineBawah" />
+              <h4>SMI Jurnal . NEWSPAPER</h4>
+              <h4><b>NEWSPAPER</b></h4>
+              <div className="lineBawahNews" />
               <div className="">
               <div className="row">
-                {journal.map((anObjectMapped, index) => {
+                {newspaper.map((anObjectMapped, index) => {
                     return (
                         <div className="col-md-3">
                             {/* ------ */}
@@ -71,6 +71,8 @@ class ListJurnal extends React.Component {
                             {/* ------ */}
                             {/* ------ */}
                             <div className="article-judul" key={anObjectMapped.id}>
+                                <b>{anObjectMapped.name}</b>
+                                <br />
                                 <b>{anObjectMapped.title}</b>
                             </div>
                             {/*<div className="description">*/}

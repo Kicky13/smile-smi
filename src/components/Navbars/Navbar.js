@@ -44,7 +44,7 @@ class Navbar extends React.Component {
     const searchResult = this.props.searchResult;
     if (typeof searchResult === "undefined") {
       return (
-        <div className="col-md-4">
+        <div className="col-md-12">
           <Form className="from" onSubmit={this.handleSearch}>
             <Input
               className="input-search-nav"
@@ -58,7 +58,7 @@ class Navbar extends React.Component {
       );
     } else {
         return (
-          <div className="col-md-4"></div>
+          <div className="col-md-12"></div>
         );
     }
   }
@@ -89,7 +89,9 @@ class Navbar extends React.Component {
                   <img className="nav-brand" src={logoSmile} alt="" />
                 </a>
               </div>
-              <searchBar/>
+              <div className="col-md-4">
+                {this.searchBar()}
+              </div>
               <div className="collapse navbar-collapse navbar-right navbar-ex1-collapse">
                 <ul className="nav navbar-nav">
                   {/*<a className="nav-brand" href="index.html"><img src={logoSmile} alt=""/></a>*/}
@@ -110,7 +112,7 @@ class Navbar extends React.Component {
                 </Button>
                 <UncontrolledPopover placement="bottom" target="UncontrolledPopover" className="PopoverLayer">
                   <PopoverHeader>
-                    <NavLink href="/" className="PopoverHead">
+                    <NavLink href={process.env.REACT_APP_ROOT + "ceksppd"} className="PopoverHead">
                       <h6 className="h4white" align="center"><i class="fa fa-folder" aria-hidden="true"></i> <b>SPPD</b></h6>
                     </NavLink>
                   </PopoverHeader>

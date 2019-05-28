@@ -4,7 +4,7 @@ import * as actions from "../../store/actions";
 import Navbar from "../../components/Navbars/Navbar";
 import Footer from "../../components/Footer/FooterDash";
 import MDSpinner from "react-md-spinner";
-import ListJurnal from "../../components/ListJurnal/ListJurnal";
+import ListNewspaper from "../../components/ListNewspaper/ListNewspaper";
 //import "../../asset/css/css-lates/dashboard.css";
 //import logo from "../../logo.svg";
 import { CircleArrow as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
@@ -67,7 +67,7 @@ class Page extends React.Component {
                         <div className="container">
                                 <div className="col-md-12 col-sm-12">
                                     {/*  */}
-                                    <ListJurnal />
+                                    <ListNewspaper />
                                     {/*  */}
                                 </div>
                         </div>

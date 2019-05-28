@@ -86,7 +86,7 @@ class BannerArticle extends React.Component {
                           &nbsp; {anObjectMapped.viewed}{" "}
                           &nbsp;&nbsp;&nbsp;&nbsp;
                           <i class="material-icons">comment</i>
-                          &nbsp; 0 &nbsp;
+                          &nbsp; {anObjectMapped.jumlah_komentar} &nbsp;
                         </p>
                       </div>
                     </div>

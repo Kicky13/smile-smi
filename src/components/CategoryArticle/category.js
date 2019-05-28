@@ -48,7 +48,7 @@ class categoryArticle extends React.Component {
           <p>Category</p>
           <div className="list-category">
             {category.map((anObjectMapped, index) => {
-              return <NavLink href={"/whatson/3/" + anObjectMapped.id}>{anObjectMapped.name}</NavLink>;
+              return <NavLink href={process.env.REACT_APP_ROOT + "whatson/3/" + anObjectMapped.id}>{anObjectMapped.name}</NavLink>;
             })}
           </div>
         </div>

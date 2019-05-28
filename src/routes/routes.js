@@ -3,6 +3,7 @@ import IndexBlack from "../pages/index-black";
 import Article from "../pages/article";
 import Jurnal from "../pages/jurnal";
 import ListJurnal from "../pages/jurnal-more";
+import ListNewspaper from "../pages/newspaper-more";
 import Gallery from "../pages/gallery";
 import SmiActivity from "../pages/smi-activity";
 import SmiNews from "../pages/smi-news";
@@ -98,6 +99,14 @@ const routes = [
         auth: true,
         icon: "tim-icons icon-coin",
         component: ListJurnal,
+        hide: true
+    },
+    {
+        path: "/listNewspaper",
+        exact: true,
+        auth: true,
+        icon: "tim-icons icon-coin",
+        component: ListNewspaper,
         hide: true
     },
     {

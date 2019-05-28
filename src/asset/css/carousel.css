@@ -8,7 +8,6 @@
   object-fit: fill;
   object-position: 50% 50%; /* default value: image is centered*/
   object-position: 0 0; /* positioned top left of the content box */
-  background-size: 100% 100%;
 }
 
 /* carousel fullscreen - vertically centered caption*/

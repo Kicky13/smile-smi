@@ -11,7 +11,11 @@ class CommentReplayArticle extends React.Component {
       comments: [],
       isLiked: false,
       thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike',
-      komentar: ''
+      komentar: {
+        comment: '',
+        id: this.props.match.params.id,
+        table: "article"
+      }
     };
   }
 
@@ -63,7 +67,9 @@ class CommentReplayArticle extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    this.setState({komentar: e.target.value});
+    let komentar = this.state.komentar;
+    komentar["comment"] = e.target.value;
+    this.setState({komentar});
   }
 
   handleSubmit(event) {
@@ -72,7 +78,8 @@ class CommentReplayArticle extends React.Component {
     let responseAPI;
     let dataForm = {
       comment: komentar,
-      id: this.props.match.params.id
+      id: this.props.match.params.id,
+      table: "article"
     }
     Http.defaults.headers.common[
       "Authorization"
@@ -125,7 +132,7 @@ class CommentReplayArticle extends React.Component {
           }
       })
     let isLiked = this.state.isLiked;
-    if (isLiked === true) {
+    if (isLiked == true) {
       this.setState({
         isLiked: false,
         thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike'
@@ -142,7 +149,7 @@ class CommentReplayArticle extends React.Component {
   render() {
     const comments = this.state.comments;
     console.log(comments);
-    if (this.state.isLiked === true) {
+    if (this.state.isLiked == true) {
       this.setState({
         thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked'
       });
@@ -150,7 +157,11 @@ class CommentReplayArticle extends React.Component {
     return (
       <div>
         <div className="comment">
-          <h3 className>Comment <button onClick={this.likeArticle.bind(this)}><i class={this.state.thumbStyle} title="Like Article"></i></button></h3>
+          <h3 className>Comment
+            {/* <button onClick={this.likeArticle.bind(this)}> */}
+              <i class={this.state.thumbStyle} title="Like Article"></i>
+            {/* </button> */}
+          </h3>
           {comments.map((anObjectMapped, index) => {
             return (
               <>

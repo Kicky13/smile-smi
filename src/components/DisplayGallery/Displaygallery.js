@@ -88,9 +88,13 @@ class DisplayGallery extends React.Component {
       </div>
 
         <div className="gallery">
-          <h4>SMI Gallery . Foto</h4>
-          <h3><b>Foto</b></h3>
           <div className="">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT}>Home</NavLink></li>
+              <li class="breadcrumb-item active" aria-current="page">List Gallery</li>
+            </ol>
+          </nav>
             <div className="row">
               {/*  */}
 
