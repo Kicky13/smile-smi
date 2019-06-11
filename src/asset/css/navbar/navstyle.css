@@ -139,10 +139,11 @@ li.social-links a {
 } */
 
 .nav-brand {
+  height: auto;
   position: static;
-  max-width: 150px;
+  max-width: 90%;
   max-height: 90px;
-  margin-top: -15px;
+  margin-top: -10px;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: 15px;
@@ -369,21 +370,27 @@ li.social-links a {
 .navbar-custom a {
   color: #fff;
   font-weight: bold;
-  font-size: 1vw;
-  border-radius: 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }
 
 .navbar-custom .nav li a:hover {
   outline: 0;
   color: #87daad;
-  border-radius: 20px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 6px;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
   outline: 0;
+}
+h6{
+  padding: 0px !important;
 }
 
 p {

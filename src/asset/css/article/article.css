@@ -126,7 +126,7 @@
 }
 
 .comment {
-  padding: 1%;
+  /* padding: 20px; */
   width: 100%;
   height: auto;
   margin-bottom: 1%;
@@ -135,7 +135,8 @@
   font-size: 1.5vw;
   color: #000000;
   border-bottom: 4px solid #87daad;
-  width: 10.5%;
+  border-bottom-width: thick;
+  display: inline-block;
 }
 
 .comment .comment-box {
@@ -257,6 +258,12 @@
   font-weight: bold;
 }
 
+.trending-now span {
+  font-size: 0.8vw !important;
+  color: #000000;
+  font-weight: normal !important;
+}
+
 .trending-now .box-trending .img-trending {
   border-radius: 5% 5% 5% 5%;
   width: 100%;
@@ -336,6 +343,7 @@
 .overlay-article .date-article {
   font-size: 0.7vw;
   color: #fff;
+  margin-top: -20px;
 }
 
 /*
@@ -452,6 +460,13 @@
 .overlay-article-like .date-like {
   font-size: 0.7vw;
   color: #fff;
+  margin-top: -10px;
+}
+
+.overlay-article .content-article p{
+  color: #fff;
+  font-size: 12px;
+  margin-top: 30px;
 }
 
 /*  */
@@ -466,6 +481,11 @@
   font-size: 2vw;
   color: #000000;
   font-weight: bold;
+}
+
+.news-other span{
+  color: #fff;
+  font-size: 12px;
 }
 
 .news-other .box-news {
@@ -562,6 +582,30 @@
 
 /* Recent Comment */
 
+.thumbsLike{
+  cursor: pointer;
+  position: absolute;
+  margin-left: 20px;
+  color:  #bdc3c7;
+  font-size: 32px;
+  display: inline-block;
+  float: right;
+}
+
+.thumbsLiked{
+  cursor: pointer;
+  position: absolute;
+  margin-left: 20px;
+  color: #87DAAD;
+  font-size: 32px;
+  display: inline-block;
+  float: right;
+}
+
+.thumbsLike:hover{
+  color: #87DAAD;
+}
+
 .recent-comment {
   padding: 1%;
   width: 100%;
@@ -580,8 +624,8 @@
   width: 100%;
   height: 100%;
   min-height: 100px;
-  margin-top: 1%;
-  border-bottom: 3px solid rgba(189, 195, 199, 1);
+  margin-top: 3%;
+  border-bottom: 1px solid rgba(189, 195, 199, 1);
 }
 
 .recent-comment .comment-box .icon {

@@ -8,6 +8,12 @@
   margin-top: 20px;
 }
 
+.LineSpan{
+  border-bottom: 2px solid rgba(189, 195, 199, 1);
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 
 .BtnSide-Search {
   margin-bottom: 30px;

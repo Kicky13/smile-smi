@@ -65,7 +65,7 @@ render() {
                   </div>
                   <div className="col-md-10 col-sm-10">
                     <div className="name-time">
-                      <p className="name">{anObjectMapped.p_user_id}</p>
+                    <p className="name"><b>{anObjectMapped.full_name}</b></p>
                       <p className="time"><Moment format="D MMM YYYY HH:mm">{anObjectMapped.date}</Moment></p>
                     </div>
                     <div className="comment-section">

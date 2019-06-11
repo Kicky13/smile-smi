@@ -127,7 +127,7 @@ class SlideTiga extends React.Component {
         let responseAPI;
         Http.defaults.headers.common[
             "Authorization"
-        ] `Bearer ${localStorage.getItem("jwt_token")}`;
+        ] = `Bearer ${localStorage.getItem("jwt_token")}`;
         Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/inputSppd", dataForm)
         .then(res => {
             responseAPI = res.data;
@@ -157,7 +157,7 @@ class SlideTiga extends React.Component {
         let responseAPI;
         Http.defaults.headers.common[
             "Authorization"
-        ] `Bearer ${localStorage.getItem("jwt_token")}`;
+        ] = `Bearer ${localStorage.getItem("jwt_token")}`;
         Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/inputCuti", dataForm)
         .then(res => {
             responseAPI = res.data;

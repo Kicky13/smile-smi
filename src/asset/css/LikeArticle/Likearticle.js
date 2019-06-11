@@ -133,7 +133,7 @@ class LikeArticle extends React.Component {
                       <span className="content-article-like">{Parser(anObjectMapped.content.substring(0, 100))}</span>
                       <br />
                       <NavLink
-                        href={process.env.REACT_APP_ROOT + "article/" + anObjectMapped.id}
+                        href={"/article/" + anObjectMapped.id}
                       >
                         <Button className="button-overlay" style={{marginLeft:80}}>
                           <h5>View more &nbsp;</h5>

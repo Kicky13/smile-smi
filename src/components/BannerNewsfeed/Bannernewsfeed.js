@@ -3,15 +3,18 @@ import React from "react";
 import { NavLink } from "reactstrap";
 // import logoTwitter from "../../twitter.svg";
 import Http from "../../Http";
-import Parser from 'html-react-parser';
+import Parser from "html-react-parser";
+import Moment from 'react-moment';
 
 class Bannernewsfeed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
-      newsfeed: [],
-      //comments: [],
+      article: [],
+      comments: [],
+      tags: [],
+      liked: false
     };
     //this.handleLogout = this.handleLogout.bind(this);
   }
@@ -25,13 +28,14 @@ class Bannernewsfeed extends React.Component {
     Http.get(process.env.REACT_APP_SMILE_API + "api/newsfeed/detail/" + id)
       .then(res => {
         this.setState({
-          newsfeed: res.data.newsfeed,
-          //comments: res.data.comments
+          article: res.data.detail,
+          comments: res.data.comments,
+          tags: res.data.tag
         });
       })
       .catch(err => {
-        console.log(err);
-        const statusCode = err.response.status;
+        // const statusCode = err.response.status;
+        const statusCode = '';
         const data = {
           error: null,
           statusCode
@@ -47,17 +51,21 @@ class Bannernewsfeed extends React.Component {
 
   }
   render() {
-    const newsfeed = this.state.newsfeed;
-    console.log(newsfeed);
+    const article = this.state.article;
+    const tags = this.state.tags.map((tagMapped, index) => {
+      return (
+          <NavLink>{tagMapped.name}</NavLink>
+      );
+    });
     return (
       <div>
-        {newsfeed.map((anObjectMapped, index) => {
+        {article.map((anObjectMapped, index) => {
           return (
             <>
               <div className="article-judul" key={anObjectMapped.id}>
                 <h1>
                   {anObjectMapped.title} &nbsp;
-              <NavLink>SMI News</NavLink>
+                  <NavLink>{anObjectMapped.cat_name}</NavLink>
                 </h1>
               </div>
               {/* ------ */}
@@ -67,20 +75,18 @@ class Bannernewsfeed extends React.Component {
                     <div className="col-md-8">
                       <div className="nama-notice">
                         <p>
-                          Anak Agung Angga Wijaya &nbsp;&nbsp;&nbsp;12 Januari 2018 :
-                          13:57:00
-                    </p>
+                        <Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment>
+                        </p>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="date-comment-view">
                         <p>
-                          <i class="material-icons">favorite</i>
-                          &nbsp; 40 &nbsp;&nbsp;&nbsp;&nbsp;
                       <i class="material-icons">visibility</i>
-                          &nbsp; 50 &nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp; {anObjectMapped.viewed}{" "}
+                          &nbsp;&nbsp;&nbsp;&nbsp;
                       <i class="material-icons">comment</i>
-                          &nbsp; 20 &nbsp;
+                          &nbsp; 0 &nbsp;
                     </p>
                       </div>
                     </div>
@@ -91,22 +97,19 @@ class Bannernewsfeed extends React.Component {
               {/* ------ */}
               <div className="image-box">
                 <img
-                  src={"https://smile.semenindonesia.com/"+anObjectMapped.img}
+                  src={"https://smile.semenindonesia.com/" + anObjectMapped.img}
                   alt=""
                 />
               </div>
               {/* ------ */}
               {/* ------ */}
               <div className="description">
-                {Parser(anObjectMapped.content)}
-
+                <p>{Parser(anObjectMapped.content)}</p>
                 <br />
                 <div className="desc-tag">
-                  <NavLink>Semen Padang</NavLink>
-                  &nbsp;
-              <NavLink>Semen Padang</NavLink>
-                  &nbsp;
-              <NavLink>Semen Padang</NavLink>
+                <div className="col-md-12 col-sm-12">
+                  {tags}
+                  </div>
                 </div>
               </div>
             </>

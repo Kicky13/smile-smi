@@ -11,25 +11,20 @@ class CommentReplayArticle extends React.Component {
       comments: [],
       isLiked: false,
       thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike',
-      komentar: {
-        comment: "",
-        id: this.props.match.params.id,
-        table: "article"
-      }
+      komentar: ''
     };
   }
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    let isLiked;
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
     //latest article
-    Http.get(process.env.REACT_APP_SMILE_API +"api/admin/article/detail/" + id)
+    Http.get(process.env.REACT_APP_SMILE_API + "api/newsfeed/detail/" + id)
       .then(res => {
         this.setState({
-          comments: res.data.commentsArticle
+          comments: res.data.comments
         });
       })
       .catch(err => {
@@ -47,18 +42,9 @@ class CommentReplayArticle extends React.Component {
       });
       Http.get(process.env.REACT_APP_SMILE_API + "api/article/isLikedArticle/" + id)
         .then(res => {
-          isLiked = res.data.isLiked;
-          if (isLiked == 1) {
-            this.setState({
-              isLiked: isLiked,
-              thumbStyle: "fa fa-thumbs-up fa-2x thumbsLiked"
-            })
-          } else {
-            this.setState({
-              isLiked: isLiked,
-              thumbStyle: "fa fa-thumbs-up fa-2x thumbsLike"
-            })
-          }
+          this.setState({
+            isLiked: res.data.isLiked
+          });
         })
         .catch(err => {
           const statusCode = err.response.status;
@@ -77,15 +63,19 @@ class CommentReplayArticle extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    let komentar = this.state.komentar;
-    komentar["comment"] = e.target.value;
-    this.setState({komentar});
+    this.setState({komentar: e.target.value});
   }
 
   handleSubmit(event) {
     event.preventDefault();
+    let komentar = this.state.komentar;
     let responseAPI;
-    let dataForm = this.state.komentar;
+    let dataForm = {
+      comment: komentar,
+      id: this.props.match.params.id,
+      table: "article"
+
+    }
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
@@ -137,14 +127,14 @@ class CommentReplayArticle extends React.Component {
           }
       })
     let isLiked = this.state.isLiked;
-    if (isLiked == 1) {
+    if (isLiked === true) {
       this.setState({
-        isLiked: 0,
+        isLiked: false,
         thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike'
       });
     } else {
       this.setState({
-        isLiked: 1,
+        isLiked: true,
         thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked'
       });
     }
@@ -154,26 +144,16 @@ class CommentReplayArticle extends React.Component {
   render() {
     const comments = this.state.comments;
     console.log(comments);
-    // if (this.state.isLiked == true) {
-    //   this.setState({
-    //     thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked'
-    //   });
-    // }
+    if (this.state.isLiked === true) {
+      this.setState({
+        thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked'
+      });
+    }
     return (
       <div>
         <div className="comment">
           <h3 className>Comment
-            {/* <button className="ButtonNone" onClick={this.likeArticle.bind(this)}> */}
-            
-              <i
-              id="likeThumb"
-              name="likeThumb" 
-              className={this.state.thumbStyle} 
-              title="Like Article"
-              onClick={this.likeArticle.bind(this)}
-              ></i>
-            {/* </button> */}
-          </h3>
+          <button className="ButtonNone" onClick={this.likeArticle.bind(this)}><i class={this.state.thumbStyle} title="Like Article"></i></button></h3>
           {comments.map((anObjectMapped, index) => {
             return (
               <>
@@ -197,6 +177,7 @@ class CommentReplayArticle extends React.Component {
                     </div>
                   </div>
                 </div>
+
               </>
             );
           })}
@@ -214,7 +195,7 @@ class CommentReplayArticle extends React.Component {
               id="komentar"
               placeholder="Masukkan komentar anda..."
               onChange={this.handleChange.bind(this)}
-              value={this.state.komentar["comment"]}
+              value={this.state.komentar}
             />
             <Button onClick={this.handleSubmit.bind(this)}>Submit</Button>
           </FormGroup>

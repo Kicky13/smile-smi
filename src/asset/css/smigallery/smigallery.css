@@ -8,6 +8,32 @@
   border-bottom: 4px solid #e50006;
   max-width: 55px;
 }
+.listVideo {
+  width: 100%;
+  height: auto;
+  margin-top: 120px;
+}
+.listVideo h3{
+  border-bottom: 4px solid #e50006;
+  max-width: 60px;
+}
+
+.listFoto {
+  width: 100%;
+  height: auto;
+  margin-top: 120px;
+}
+.listFoto h3{
+  border-bottom: 4px solid #e50006;
+  max-width: 50px;
+}
+
+.latest-video {
+  width: 100%;
+  height: auto;
+  padding: 2%;
+}
+
 
 button {
   margin: 0 auto;

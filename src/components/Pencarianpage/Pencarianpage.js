@@ -16,12 +16,6 @@ class Pencarianpage extends React.Component {
         //this.handleLogout = this.handleLogout.bind(this);
     }
 
-    componentWillMount() {
-        this.setState({
-            searchResult: []
-        });
-    }
-
     componentDidMount() {
         var findWord = this.props.findWord;
         Http.defaults.headers.common[
@@ -90,13 +84,15 @@ class Pencarianpage extends React.Component {
                                     </Lazyload>
                                     </div>
                                     <br/>
-                                    <Button className="BtnKategori" color="info">{anObjectMapped.category}</Button>
+                                    <NavLink className="category-nav">{anObjectMapped.category}</NavLink>
                                     <br/>
                                     {/* ------ */}
                                     {/* ------ */}
                                     <div className="article-judul">
                                         <h2>
+                                            <NavLink href={process.env.REACT_APP_ROOT + 'article/' + anObjectMapped.id}>
                                             {anObjectMapped.title}
+                                            </NavLink>
                                             <br/>
                                         </h2>
                                     </div>
@@ -128,14 +124,10 @@ class Pencarianpage extends React.Component {
                                     {/* ------ */}
                                     <div className="description">
                                         <p>
-                                            {Parser(anObjectMapped.content.substring(0, 150))}
+                                            {Parser(anObjectMapped.content.substring(0, 250))}
                                         </p>
                                     </div>
-                                    <NavLink href={process.env.REACT_APP_ROOT + 'article/' + anObjectMapped.id}>
-                                        <Button className="BtnSide-Search">
-                                            View More &nbsp; <i className="fas fa-arrow-alt-circle-right"/>
-                                        </Button>
-                                    </NavLink>
+                                    <div className="LineSpan" />
                                 </div>
                                 );
                             })}

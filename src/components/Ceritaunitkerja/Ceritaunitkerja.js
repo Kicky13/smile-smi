@@ -70,7 +70,7 @@ class Ceritaunitkerja extends React.Component {
                 <div className="title-news cerita-news">
                   <h4>
                     {" "}
-                    <a href={"/dev/smile/article/" + anObjectMapped.id}>
+                    <a href={"/dev/smile/newsfeed/" + anObjectMapped.id}>
                       {anObjectMapped.title}
                     </a>
                   </h4>

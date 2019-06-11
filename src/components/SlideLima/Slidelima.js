@@ -10,7 +10,6 @@ import {
   Col
 } from "reactstrap";
 import classnames from "classnames";
-import { Marketing } from "../../dummy/redesign/marketing";
 import LazyLoad from "react-lazy-load";
 import ProgressiveImage from "react-progressive-image-loading";
 import Http from "../../Http";
@@ -26,7 +25,8 @@ class SlideLima extends React.Component {
       activeTab: "1",
       csr: [],
       lifestyle: [],
-      bisnis: []
+      bisnis: [],
+      kilas: []
     };
   }
 
@@ -103,6 +103,29 @@ class SlideLima extends React.Component {
         }
         return Promise.reject(data);
       });
+
+    //category Kilas
+    Http.get(
+      process.env.REACT_APP_SMILE_API + "api/articlecategory/category/5"
+    )
+      .then(res => {
+        this.setState({
+          kilas: res.data.category
+        });
+      })
+      .catch(err => {
+        const statusCode = err.response.status;
+        const data = {
+          error: null,
+          statusCode
+        };
+        if (statusCode === 401 || statusCode === 422) {
+          // status 401 means unauthorized
+          // status 422 means unprocessable entity
+          data.error = err.response.data.message;
+        }
+        return Promise.reject(data);
+      });
   }
 
   toggle(tab) {
@@ -122,6 +145,9 @@ class SlideLima extends React.Component {
     const lifestyle = this.state.lifestyle;
     console.log("lifestyle");
     console.log(lifestyle);
+    const kilas = this.state.kilas;
+    console.log("lifestyle");
+    console.log(kilas);
     return (
       <div>
         <div className="slidelima">
@@ -156,7 +182,7 @@ class SlideLima extends React.Component {
                           this.toggle("2");
                         }}
                       >
-                        Marketing
+                        Kilas
                       </NavLink>
                     </NavItem>
                     <NavItem className="nav-item">
@@ -254,10 +280,10 @@ class SlideLima extends React.Component {
                       </Row>
                     </TabPane>
                     <TabPane tabId="2">
-                      <Row>
+                    <Row>
                         <Col sm="12">
                           <div className="row">
-                            {Marketing.map((anObjectMapped, index) => {
+                            {kilas.map((anObjectMapped, index) => {
                               return (
                                 <div
                                   key={anObjectMapped.id}
@@ -266,8 +292,14 @@ class SlideLima extends React.Component {
                                   <div className="content-one-slidelima ">
                                     <LazyLoad>
                                       <ProgressiveImage
-                                        preview={anObjectMapped.lokasifoto}
-                                        src={anObjectMapped.lokasifoto}
+                                        preview={
+                                          "https://smile.semenindonesia.com/" +
+                                          anObjectMapped.img
+                                        }
+                                        src={
+                                          "https://smile.semenindonesia.com/" +
+                                          anObjectMapped.img
+                                        }
                                         render={(src, style) => (
                                           <img
                                             decoding="async"
@@ -281,7 +313,7 @@ class SlideLima extends React.Component {
 
                                     <div className="item-overlay top">
                                       <h5 className="date-title">
-                                        <b><h4>{anObjectMapped.judul}</h4></b>{" "}
+                                        <b><h4>{anObjectMapped.title}</h4></b>{" "}
                                       </h5>
                                       <p className="date-title-slide">
                                       <Moment format="D MMM YYYY"><i>{anObjectMapped.posted_date}</i></Moment>
@@ -291,7 +323,7 @@ class SlideLima extends React.Component {
                                         {" "}
                                         &nbsp;{" "}
                                         {Parser(
-                                          anObjectMapped.spoiler.substring(
+                                          anObjectMapped.content.substring(
                                             0,
                                             100
                                           )

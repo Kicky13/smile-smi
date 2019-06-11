@@ -69,11 +69,14 @@ class ListArticle extends React.Component {
                       </Lazyload>
                       </div>
                       <br/>
+                      <NavLink className="category-nav">{anObjectMapped.cat_name}</NavLink>
                       {/* ------ */}
                       {/* ------ */}
                       <div className="article-judul">
                           <h2>
-                              {anObjectMapped.title}
+                            <NavLink href={process.env.REACT_APP_ROOT + 'article/' + anObjectMapped.id}>
+                            {anObjectMapped.title}
+                            </NavLink>
                               <br/>
                           </h2>
                       </div>
@@ -93,7 +96,7 @@ class ListArticle extends React.Component {
                                               &nbsp;&nbsp;&nbsp;&nbsp;
 
                                               <i class="material-icons material-search">comment</i>
-                                              &nbsp; {anObjectMapped.comment} &nbsp;
+                                              &nbsp; {anObjectMapped.jumlah} &nbsp;
                                               </div>
                                           </p>
                                       </div>
@@ -108,11 +111,7 @@ class ListArticle extends React.Component {
                               {Parser(anObjectMapped.content.substring(0, 250))}
                           </p>
                       </div>
-                      <NavLink href={process.env.REACT_APP_ROOT + 'article/' + anObjectMapped.id}>
-                          <Button className="BtnSide-Search">
-                              View More &nbsp; <i className="fas fa-arrow-alt-circle-right"/>
-                          </Button>
-                      </NavLink>
+                      <div className="LineSpan" />
                   </div>
                     );
                 })}

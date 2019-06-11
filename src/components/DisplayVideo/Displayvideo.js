@@ -45,19 +45,15 @@ class DisplayGallery extends React.Component {
     const videoList = this.state.videoList;
     return (
       <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-        <div className="gallery">
-          <nav aria-label="breadcrumb">
+        <div className="listVideo">
+        <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT}>Home</NavLink></li>
+              <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT + "gallery"}>Gallery</NavLink></li>
               <li class="breadcrumb-item active" aria-current="page">List Video</li>
             </ol>
           </nav>
+          <h3><b>Video</b></h3>
           <div className="">
             <div className="row">
               {/*  */}

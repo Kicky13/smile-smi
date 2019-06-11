@@ -8,7 +8,7 @@ import Category from "../../components/CategoryArticle/category";
 import Videoarticle from "../../components/VideoArticle/Videoarticle";
 import Recentarticle from "../../components/RecentCArticle/Recentcarticle";
 import BannerNewsfeed from "../../components/BannerNewsfeed/Bannernewsfeed";
-import Commentreplayarticle from "../../components/CommentReplayArticle/Commentreplayarticle";
+import Commentreplaynewsfeed from "../../components/CommentReplayNewsfeed/Commentreplaynewsfeed";
 import Trendingarticle from "../../components/TrendingArticle/Trendingarticle";
 import Likearticle from "../../components/LikeArticle/Likearticle";
 import Http from "../../Http";
@@ -92,13 +92,14 @@ class Page extends React.Component {
         }
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-8 col-sm-8">
+          <div className="col-md-1 col-sm-1" />
+            <div className="col-md-7 col-sm-7" style={{marginTop:100}}>
               <BannerNewsfeed {...this.props} />
-              <Commentreplayarticle {...this.props} />
+              <Commentreplaynewsfeed {...this.props} />
               <Trendingarticle />
             </div>
 
-            <div className="col-md-4 col-sm-4">
+            <div className="col-md-4 col-sm-4" style={{marginTop:150}}>
               <Tab3 />
               <Category />
               <Videoarticle />

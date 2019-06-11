@@ -59,42 +59,38 @@ class DisplayGallery extends React.Component {
     const { photoIndex, isOpen } = this.state;
     return (
       <div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+        <div>
+          {isOpen && (
+            <Lightbox
+              wrapperClassName="classLightbox"
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => this.setState({ isOpen: false })}
+              onMovePrevRequest={() =>
+                this.setState({
+                  photoIndex: (photoIndex + images.length - 1) % images.length,
+                })
+              }
+              onMoveNextRequest={() =>
+                this.setState({
+                  photoIndex: (photoIndex + 1) % images.length,
+                })
+              }
+            />
+          )}
+        </div>
 
-      <div>
-        {isOpen && (
-          <Lightbox
-            wrapperClassName="classLightbox"
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-            onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + images.length - 1) % images.length,
-              })
-            }
-            onMoveNextRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + 1) % images.length,
-              })
-            }
-          />
-        )}
-      </div>
-
-        <div className="gallery">
-          <div className="">
+        <div className="listFoto">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT}>Home</NavLink></li>
+              <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT + "gallery"}>Gallery</NavLink></li>
               <li class="breadcrumb-item active" aria-current="page">List Gallery</li>
             </ol>
           </nav>
+          <h3><b>Foto</b></h3>
+          <div className="">
             <div className="row">
               {/*  */}
 

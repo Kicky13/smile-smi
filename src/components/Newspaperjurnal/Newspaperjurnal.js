@@ -16,12 +16,13 @@ class Newspaperjurnal extends React.Component {
   }
 
   componentDidMount() {
+    let dataKoran = this.state.koran;
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
     //latest article
     //advertise limit 1
-    Http.get(process.env.REACT_APP_SMILE_API +"newspaper/getlatestnewspaper")
+    Http.get(process.env.REACT_APP_SMILE_API +"newspaper/getlatestnewspaper2/0/12")
       .then(res => {
         this.setState({
           videoBawah: res.data.newspaper
