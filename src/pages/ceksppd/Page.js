@@ -7,7 +7,7 @@ import DisplayUser from "../../components/DisplayUser/Displayuser";
 import DisplayCuti from "../../components/DisplayCuti/Displaycuti";
 import DisplaySppd from "../../components/DisplaySppd/Displaysppd";
 import DisplayHistory from "../../components/DisplayHistory/Displayhistory";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton";
 
 class Page extends React.Component {
   constructor(props) {
@@ -97,17 +97,7 @@ class Page extends React.Component {
             </div>
 
             <Footer />
-            <ScrollUpButton
-              ContainerClassName="ScrollUpButton__Container"
-              TransitionClassName="ScrollUpButton__Toggled"
-              StopPosition={0}
-              distance={100}
-              breakpoint={768}
-              EasingType="easeOutCubic"
-              AnimationDuration={2000}
-              style={{}}
-              ToggledStyle={{}}
-            />
+            <ScrollUpButton/>
           </>
         ) : null}
       </div>

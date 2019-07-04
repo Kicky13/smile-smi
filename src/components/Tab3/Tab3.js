@@ -138,32 +138,6 @@ class Tab3 extends React.Component {
               Trending News
             </NavLink>
           </NavItem>
-          {/*
-          <NavItem className="nav-item">
-            <NavLink
-              className={classnames({
-                active: this.state.activeTab === "2"
-              })}
-              onClick={() => {
-                this.toggle("2");
-              }}
-            >
-              Hot Article
-            </NavLink>
-          </NavItem>
-          <NavItem className="nav-item">
-            <NavLink
-              className={classnames({
-                active: this.state.activeTab === "3"
-              })}
-              onClick={() => {
-                this.toggle("3");
-              }}
-            >
-              Top Newsfeed
-            </NavLink>
-          </NavItem>
-          */}
         </Nav>
         <br />
         <TabContent activeTab={this.state.activeTab}>
@@ -232,80 +206,11 @@ class Tab3 extends React.Component {
                                 <i className="material-icons">comment</i>
                                 &nbsp; {anObjectMapped.comment}
                               </p>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          {/*
-          <TabPane tabId="2">
-            <Row>
-              <Col sm="12">
-                <div className="row">
-                  {hotarticle.map((anObjectMapped, index) => {
-                    return (
-                      <div key={anObjectMapped.id} className="news">
-                        <div className="col-md-4">
-                          <LazyLoad>
-                            <ProgressiveImage
-                              preview={
-                                "https://smile.semenindonesia.com/" +
-                                anObjectMapped.img
-                              }
-                              src={
-                                "https://smile.semenindonesia.com/" +
-                                anObjectMapped.img
-                              }
-                              render={(src, style) => (
-                                <img
-                                  className="img-box"
-                                  src={
-                                    "https://smile.semenindonesia.com/" +
-                                    anObjectMapped.img
-                                  }
-                                  alt=""
-                                  style={style}
-                                />
-                              )}
-                            />
-                          </LazyLoad>
-                        </div>
-                        <div className="col-md-8">
-                          <div className="title-news">
-                            <h4>
-                              {" "}
-                              <a href={"/article/" + anObjectMapped.id}>
-                                {anObjectMapped.title}
-                              </a>
-                            </h4>
-                          </div>
-                          <div className="title-footer">
-                            <div className="comment-eye">
-                              <p>
-                                {" "}
-                                <i
-                                  className="fa fa-eye"
-                                  aria-hidden="true"
-                                />{" "}
-                                &nbsp; {anObjectMapped.viewed}
-                              </p>
                               &nbsp;
                               <p>
                                 {" "}
-                                <i className="material-icons">comment</i>
-                                &nbsp; 0
-                              </p>
-                            </div>
-                            <div className="date">
-                              <p>
-                                <i className="material-icons">calendar_today</i>
-                                &nbsp; {anObjectMapped.posted_date}
+                                <i className="material-icons">thumb_up</i>
+                                &nbsp; {anObjectMapped.like}
                               </p>
                             </div>
                           </div>
@@ -317,80 +222,6 @@ class Tab3 extends React.Component {
               </Col>
             </Row>
           </TabPane>
-          <TabPane tabId="3">
-            <Row>
-              <Col sm="12">
-                <div className="row">
-                  {topnewsfeed.map((anObjectMapped, index) => {
-                    return (
-                      <div key={anObjectMapped.id} className="news">
-                        <div className="col-md-4">
-                          <LazyLoad>
-                            <ProgressiveImage
-                              preview={
-                                "https://smile.semenindonesia.com/" +
-                                anObjectMapped.img
-                              }
-                              src={
-                                "https://smile.semenindonesia.com/" +
-                                anObjectMapped.img
-                              }
-                              render={(src, style) => (
-                                <img
-                                  className="img-box"
-                                  src={
-                                    "https://smile.semenindonesia.com/" +
-                                    anObjectMapped.img
-                                  }
-                                  alt=""
-                                  style={style}
-                                />
-                              )}
-                            />
-                          </LazyLoad>
-                        </div>
-                        <div className="col-md-8">
-                          <div className="title-news">
-                            <h4>
-                              {" "}
-                              <a href={"/newsfeed/" + anObjectMapped.id}>
-                                {anObjectMapped.title}
-                              </a>
-                            </h4>
-                          </div>
-                          <div className="title-footer">
-                            <div className="comment-eye">
-                              <p>
-                                {" "}
-                                <i
-                                  className="fa fa-eye"
-                                  aria-hidden="true"
-                                />{" "}
-                                &nbsp; {anObjectMapped.viewed}
-                              </p>
-                              &nbsp;
-                              <p>
-                                {" "}
-                                <i className="material-icons">comment</i>
-                                &nbsp; 0
-                              </p>
-                            </div>
-                            <div className="date">
-                              <p>
-                                <i className="material-icons">calendar_today</i>
-                                &nbsp; {anObjectMapped.created_date}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          */}
         </TabContent>
       </div>
     );

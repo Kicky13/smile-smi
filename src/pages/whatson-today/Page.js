@@ -12,11 +12,7 @@ import Likearticle from "../../components/LikeArticle/Likearticle";
 import Http from "../../Http";
 import LazyLoad from "react-lazy-load";
 import ProgressiveImage from "react-progressive-image-loading";
-// import Parser from 'html-react-parser';
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
-
-//import "../../asset/css/css-lates/dashboard.css";
-//import logo from "../../logo.svg";
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton";
 
 class Page extends React.Component {
     constructor(props) {
@@ -157,17 +153,7 @@ class Page extends React.Component {
                 <p>&nbsp;</p>
 
                 <Footer />
-                <ScrollUpButton
-                    ContainerClassName="ScrollUpButton__Container"
-                    TransitionClassName="ScrollUpButton__Toggled"
-                    StopPosition={0}
-                    distance={100}
-                    breakpoint={768}
-                    EasingType="easeOutCubic"
-                    AnimationDuration={2000}
-                    style={{}}
-                    ToggledStyle={{}}
-                />
+                <ScrollUpButton/>
             </div>
         );
     }

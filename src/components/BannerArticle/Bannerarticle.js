@@ -13,6 +13,8 @@ class BannerArticle extends React.Component {
       isOpen: false,
       article: [],
       comments: [],
+      comment: "",
+      like: "",
       tags: [],
       liked: false
     };
@@ -32,7 +34,9 @@ class BannerArticle extends React.Component {
         this.setState({
           article: res.data.detail,
           comments: res.data.comments,
-          tags: res.data.tag
+          tags: res.data.tag,
+          like: res.data.like,
+          comment: res.data.jumlah_comment
         });
       })
       .catch(err => {
@@ -51,7 +55,7 @@ class BannerArticle extends React.Component {
       });
   }
   render() {
-    const article = this.state.article;
+    const { article, like, comment } = this.state;
     const tags = this.state.tags.map((tagMapped, index) => {
       return (
           <NavLink>{tagMapped.name}</NavLink>
@@ -86,7 +90,9 @@ class BannerArticle extends React.Component {
                           &nbsp; {anObjectMapped.viewed}{" "}
                           &nbsp;&nbsp;&nbsp;&nbsp;
                           <i class="material-icons">comment</i>
-                          &nbsp; {anObjectMapped.jumlah_komentar} &nbsp;
+                          &nbsp; {comment} &nbsp;
+                          <i class="material-icons">thumb_up</i>
+                          &nbsp; {like} &nbsp;
                         </p>
                       </div>
                     </div>

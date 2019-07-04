@@ -500,8 +500,7 @@ class SlideTiga extends React.Component {
                                                     </div>
                                                     <div className="office-box">
                                                         <NavLink
-                                                            href={"http://app.semenindonesia.com/sgg/hris/bukutelpon"}
-                                                            target="_blank">
+                                                            href={process.env.REACT_APP_ROOT + "bukutelepon"}>
                                                             <div className="logo-box">
                                                                 <i className="material-icons">library_books</i>
                                                             </div>
@@ -509,7 +508,7 @@ class SlideTiga extends React.Component {
                                                         </NavLink>
                                                     </div>
                                                     <div className="office-box">
-                                                        <NavLink href={"http://ndo.semenindonesia.com/"}
+                                                        <NavLink href={"http://ndo.semenindonesia.com"}
                                                         target="_blank">
                                                             <div className="logo-box">
                                                                 <i className="material-icons">headset_mic</i>

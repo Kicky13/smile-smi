@@ -99,6 +99,12 @@ class Ceritaunitkerja extends React.Component {
                       <i className="material-icons">comment</i>
                       &nbsp; {anObjectMapped.comment}
                     </p>
+                    &nbsp;
+                    <p>
+                      {" "}
+                      <i className="material-icons">thumb_up</i>
+                      &nbsp; {anObjectMapped.like}
+                    </p>
                   </div>
 
                 </div>

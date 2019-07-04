@@ -1,4 +1,3 @@
-// import { Tooltip, Button } from "reactstrap";
 import React from "react";
 import { Button, NavLink } from "reactstrap";
 import Slider from "react-slick";

@@ -7,6 +7,7 @@ import ReeValidate from "ree-validate";
 import AuthService from "../../services";
 import logoSISI from "../../logoSmileWhite.png";
 import ScrollLock from "react-scroll-lock-component";
+import Swal from "sweetalert2";
 
 import LazyLoad from "react-lazy-load";
 import ProgressiveImage from "react-progressive-image-loading";
@@ -117,10 +118,15 @@ class Page extends React.Component {
 
   render() {
     //const { from } = this.props.location.state || { from: { pathname: '/' } };
-    const { isAuthenticated } = this.props;
-
+    const { isAuthenticated} = this.props;
+    const userdata = JSON.parse(localStorage.getItem('userdata'));
     if (isAuthenticated) {
-      return <Redirect to="/" />;
+      Swal.fire({
+        type: 'info',
+        title: 'Selamat Datang',
+        text: '' + userdata.mk_nama
+      });
+      return <Redirect to="/"></Redirect>
     }
     const { errors } = this.state;
 

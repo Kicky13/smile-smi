@@ -1,34 +1,42 @@
 import React from "react";
-// import Calendar from "react-calendar";
 import FullCalendar from "@fullcalendar/react";
 import DayGridPlugins from "@fullcalendar/daygrid";
-import Moment from 'react-moment';
-import "@fullcalendar/core/main.css"
-import "@fullcalendar/daygrid/main.css"
+import "@fullcalendar/core/main.css";
+import "@fullcalendar/daygrid/main.css";
+import Http from "../../Http";
 
 class Calendarjurnal extends React.Component {
   constructor(props){
       super(props);
       this.state = {
-          events: [
-              {
-                  title: 'Test Event1',
-                  start: '2019-04-26'
-              },
-              {
-                  title: 'Lebaran',
-                  start: '2019-06-05'
-              },
-              {
-                  title: 'Test Event2',
-                  start: '2019-04-01',
-              }
-          ]
+          events: []
       }
   }
   state = {
     date: new Date(),
   };
+
+  componentDidMount() {
+    Http.get(process.env.REACT_APP_SMILE_API + "anniversary/getCalendar")
+      .then(res => {
+        this.setState({
+          events: res.data
+        });
+      })
+      .catch(err => {
+        const statusCode = err.response.status;
+        const data = {
+          error: null,
+          statusCode
+        };
+        if (statusCode === 401 || statusCode === 422) {
+          // status 401 means unauthorized
+          // status 422 means unprocessable entity
+          data.error = err.response.data.message;
+        }
+        return Promise.reject(data);
+      });
+  }
 
   onChange = date => this.setState({ date });
 

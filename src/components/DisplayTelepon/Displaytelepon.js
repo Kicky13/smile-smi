@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink, Button, Table } from "reactstrap";
-import Http from "../../Http";
+import { NavLink } from "reactstrap";
+
 class Displaytelepon extends React.Component {
   constructor(props) {
     super(props);
@@ -10,44 +10,38 @@ class Displaytelepon extends React.Component {
     //this.handleLogout = this.handleLogout.bind(this);
   }
 
-  componentDidMount() {
-    Http.defaults.headers.common[
-      "Authorization"
-    ] = `Bearer ${localStorage.getItem("jwt_token")}`;
-
-    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/bukutelepon")
-    .then(res => {
-      this.setState({
-        bukutelpon: res.data.rows
-      });
-    })
-    .catch(err => {
-      const statusCode = err.response.status;
-        const data = {
-          error: null,
-          statusCode
-        };
-        if (statusCode === 401 || statusCode === 422) {
-          // status 401 means unauthorized
-          // status 422 means unprocessable entity
-          data.error = err.response.data.message;
-        }
-        return Promise.reject(data);
-    });
-  }
-
   render() {
-    const bukutelepon = this.state.bukutelpon;
+    const styleDiv = {
+      width: "1322px",
+      height: "1000px",
+      overflow: "hidden",
+      position: "relative"
+    };
+    const styleIframe = {
+      width: "1292px",
+      height: "1000px",
+      position: "absolute",
+      top: "-120px"
+    };
+    
     return (
       <div>
         <div className="telepon">
           <div className="col-md-12">
-          <h4>Home . Buku Telepon</h4>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT}>Home</NavLink></li>
+              <li class="breadcrumb-item active" aria-current="page">Buku Telepon</li>
+            </ol>
+          </nav>
           <h3><b>Buku Telepon</b></h3>
 
           <div className="row">
             <div className="col-md-12">
-              <Table bordered hover>
+              <div style={styleDiv}>
+                <iframe style={styleIframe} src="http://app.semenindonesia.com/sgg/hris/bukutelpon/"></iframe>
+              </div>
+              {/* <Table bordered hover>
                 <thead>
                   <tr>
                     <th>No</th>
@@ -80,7 +74,7 @@ class Displaytelepon extends React.Component {
                     );
                   })}
                 </tbody>
-              </Table>
+              </Table> */}
               </div>
           </div>
           </div>

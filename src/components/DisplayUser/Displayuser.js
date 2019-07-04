@@ -47,7 +47,7 @@ class Displayuser extends React.Component {
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><NavLink href={process.env.REACT_APP_ROOT}>Home</NavLink></li>
-                <li class="breadcrumb-item active" aria-current="page">SPPD dan Cuti</li>
+                <li class="breadcrumb-item active" aria-current="page">SMI Office</li>
               </ol>
             </nav>
               <div className="row">

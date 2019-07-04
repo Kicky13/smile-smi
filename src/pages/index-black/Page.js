@@ -9,7 +9,7 @@ import SlideEmpat from "../../components/SlideEmpat/Slideempat";
 import SlideLima from "../../components/SlideLima/Slidelima";
 import MDSpinner from "react-md-spinner";
 import Tab3 from "../../components/Tab3/Tab3";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton";
 
 class Page extends React.Component {
   constructor(props) {
@@ -92,17 +92,7 @@ class Page extends React.Component {
             <SlideEmpat />
             <SlideLima />
             <Footer />
-            <ScrollUpButton
-              ContainerClassName="ScrollUpButton__Container"
-              TransitionClassName="ScrollUpButton__Toggled"
-              StopPosition={0}
-              distance={100}
-              breakpoint={768}
-              EasingType="easeOutCubic"
-              AnimationDuration={2000}
-              style={{}}
-              ToggledStyle={{}}
-            />
+            <ScrollUpButton/>
           </>
         ) : null}
       </div>

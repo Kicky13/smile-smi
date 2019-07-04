@@ -1,5 +1,4 @@
 import React from "react";
-// import { Form, Input } from "reactstrap";
 import * as actions from "../../store/actions";
 import Navbar from "../../components/Navbars/Navbar";
 import Footer from "../../components/Footer/FooterDash";
@@ -14,9 +13,7 @@ import Koransminews from "../../components/KoranSMINews/Koransminews";
 import Ceritaunitkerja from "../../components/Ceritaunitkerja/Ceritaunitkerja";
 import Articlesminews from "../../components/ArticleSMINews/Articlesminews";
 import Advertisement from "../../components/Advertisement/Advertisement";
-//import "../../asset/css/css-lates/dashboard.css";
-//import logo from "../../logo.svg";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton"; //Add this line Here
 
 class Page extends React.Component {
   constructor(props) {
@@ -111,17 +108,7 @@ class Page extends React.Component {
             </div>
 
             <Footer />
-            <ScrollUpButton
-              ContainerClassName="ScrollUpButton__Container"
-              TransitionClassName="ScrollUpButton__Toggled"
-              StopPosition={0}
-              distance={100}
-              breakpoint={768}
-              EasingType="easeOutCubic"
-              AnimationDuration={2000}
-              style={{}}
-              ToggledStyle={{}}
-            />
+            <ScrollUpButton/>
           </>
         ) : null}
       </div>

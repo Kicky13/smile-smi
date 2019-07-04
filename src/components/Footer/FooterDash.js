@@ -4,7 +4,6 @@ import logoSmile from "../../logoSmileWhite.png";
 import logoGroup from "../../smig.png";
 import LazyLoad from "react-lazy-load";
 import ProgressiveImage from "react-progressive-image-loading";
-//import logoAllCompany from "../../asset/img/logo-all-company.png";
 class Footer extends React.Component {
   render() {
     return (
@@ -70,6 +69,9 @@ class Footer extends React.Component {
                   </li>
                   <li>
                     <NavLink href="http://library.semenindonesia.com/" target="_blank">Pustaka Online</NavLink>
+                  </li>
+                  <li>
+                    <NavLink href="http://hukum.semenindonesia.com/sgg/hmr/" target="_blank">Hukum Online</NavLink>
                   </li>
                   <li>
                     <NavLink href="https://webmail.semenindonesia.com/" target="_blank">Email Exchange</NavLink>

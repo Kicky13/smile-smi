@@ -4,6 +4,7 @@ import Lazyload from "react-lazy-load";
 import Http from "../../Http";
 import Slider from "react-slick";
 import Parser from "html-react-parser";
+import Moment from "react-moment";
 
 class Pencarianpage extends React.Component {
 
@@ -48,6 +49,14 @@ class Pencarianpage extends React.Component {
     }
 
     render() {
+        const styleCategory = {
+            background: "#80d8b1",
+            padding: "12px 16px 12px 16px",
+            borderRadius: "6px",
+        };
+        const styleDate = {
+            color: "black"
+        };
         const settings = {
             dots: true,
             infinite: true,
@@ -84,7 +93,7 @@ class Pencarianpage extends React.Component {
                                     </Lazyload>
                                     </div>
                                     <br/>
-                                    <NavLink className="category-nav">{anObjectMapped.category}</NavLink>
+                                    <NavLink style={styleCategory}>{anObjectMapped.category}</NavLink>
                                     <br/>
                                     {/* ------ */}
                                     {/* ------ */}
@@ -95,6 +104,9 @@ class Pencarianpage extends React.Component {
                                             </NavLink>
                                             <br/>
                                         </h2>
+                                        <p style={styleDate}>
+                                            <Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment>
+                                        </p>
                                     </div>
 
                                     <div className="notice">
@@ -104,15 +116,14 @@ class Pencarianpage extends React.Component {
                                                     <div className="nama-notice-search">
                                                         <p>
                                                           <div className="Comment-search">
-                                                            <i
-                                                              className="fa fa-eye fa-lg"
-                                                              aria-hidden="true"
-                                                            />{" "}
-                                                            &nbsp; {anObjectMapped.viewed}
-                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <i className="material-icons material-search">visibility</i>
+                                                            &nbsp; {anObjectMapped.viewed} &nbsp;
 
                                                             <i class="material-icons material-search">comment</i>
                                                             &nbsp; {anObjectMapped.comment} &nbsp;
+
+                                                            <i class="material-icons material-search">thumb_up</i>
+                                                            &nbsp; {anObjectMapped.like} &nbsp;
                                                             </div>
                                                         </p>
                                                     </div>

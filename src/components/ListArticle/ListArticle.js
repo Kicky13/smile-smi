@@ -1,11 +1,9 @@
-// import { Tooltip, Button } from "reactstrap";
 import React from "react";
 import {Button, NavLink} from "reactstrap";
-// import logoTwitter from "../../twitter.svg";
 import Lazyload from "react-lazy-load";
 import Http from "../../Http";
 import Parser from "html-react-parser";
-import Moment from 'react-moment';
+import Moment from "react-moment";
 
 class ListArticle extends React.Component {
     constructor(props) {
@@ -55,6 +53,18 @@ class ListArticle extends React.Component {
     }
     render() {
         const article = this.state.article;
+        const styleDate = {
+            color: "black"
+        }
+        const styleCategory = {
+            background: "#80d8b1",
+            padding: "12px 16px 12px 16px",
+            borderRadius: "6px",
+        }
+        const styleImage = {
+            width: "70%",
+            height: "auto"
+        }
         return (
             <div>
                 {article.map((anObjectMapped, index) => {
@@ -65,11 +75,12 @@ class ListArticle extends React.Component {
                           <img
                               src={"https://smile.semenindonesia.com/" + anObjectMapped.img}
                               alt={anObjectMapped.title}
+                              style={styleImage}
                           />
                       </Lazyload>
                       </div>
                       <br/>
-                      <NavLink className="category-nav">{anObjectMapped.cat_name}</NavLink>
+                      <NavLink style={styleCategory}>{anObjectMapped.cat_name}</NavLink>
                       {/* ------ */}
                       {/* ------ */}
                       <div className="article-judul">
@@ -77,29 +88,25 @@ class ListArticle extends React.Component {
                             <NavLink href={process.env.REACT_APP_ROOT + 'article/' + anObjectMapped.id}>
                             {anObjectMapped.title}
                             </NavLink>
-                              <br/>
                           </h2>
+                          <p style={styleDate}>
+                            <Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment>
+                          </p>
                       </div>
-
                       <div className="notice">
                           <div className="">
                               <div className="row">
                                   <div className="col-md-4">
-                                      <div className="nama-notice-search">
-                                          <p>
-                                            <div className="Comment-search">
-                                              <i
-                                                className="fa fa-eye fa-lg"
-                                                aria-hidden="true"
-                                              />{" "}
-                                              &nbsp; {anObjectMapped.viewed}
-                                              &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <div className="Comment-search">
+                                            <i className="material-icons material-search">visibility</i>
+                                            &nbsp; {anObjectMapped.viewed} &nbsp;
 
-                                              <i class="material-icons material-search">comment</i>
-                                              &nbsp; {anObjectMapped.jumlah} &nbsp;
-                                              </div>
-                                          </p>
-                                      </div>
+                                            <i class="material-icons material-search">comment</i>
+                                            &nbsp; {anObjectMapped.jumlah} &nbsp;
+
+                                            <i class="material-icons material-search">thumb_up</i>
+                                            &nbsp; {anObjectMapped.like} &nbsp;
+                                        </div>
                                   </div>
                               </div>
                           </div>

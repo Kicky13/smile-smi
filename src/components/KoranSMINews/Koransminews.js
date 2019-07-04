@@ -51,7 +51,7 @@ class Koransminews extends React.Component {
           <div className="box-koran">
           {newspaper.map((anObjectMapped, index) => {
             return (
-            <NavLink href={process.env.REACT_APP_ROOT + "ListNewspaper"} title={anObjectMapped.name}>{anObjectMapped.name}<br /></NavLink>
+            <NavLink href={process.env.REACT_APP_ROOT + "ListNewspaper/" + anObjectMapped.id} title={anObjectMapped.name}>{anObjectMapped.name}<br /></NavLink>
             );
           })}
           </div>

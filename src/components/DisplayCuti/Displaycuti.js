@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink, Button, Table } from "reactstrap";
 import Http from "../../Http";
-import Parser from "html-react-parser";
-import Moment from 'react-moment';
 class Displaycuti extends React.Component {
   constructor(props) {
     super(props);
@@ -48,9 +46,9 @@ class Displaycuti extends React.Component {
           <div className="col-md-10">
           <h2>CUTI</h2>
           </div>
-          <div className="col-md-2">
+          {/* <div className="col-md-2">
           <Button color="primary" className="TambahSppd">Tambah</Button>{' '}
-          </div>
+          </div> */}
         </div>
 
           <div className="row">
@@ -62,7 +60,6 @@ class Displaycuti extends React.Component {
                     <th>Keperluan</th>
                     <th>Mulai</th>
                     <th>Berakhir</th>
-                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -73,13 +70,6 @@ class Displaycuti extends React.Component {
                         <td>{anObjectMapped.ct_jenis}</td>
                         <td>{anObjectMapped.ct_from}</td>
                         <td>{anObjectMapped.ct_to}</td>
-                        {/* <td><Button color="success">Approved</Button>{' '}</td> */}
-                        <td>
-                          <div class="divider"/>
-                          <Button color="secondary" className="Actionsppd"><i class="fa fa-trash" aria-hidden="true"></i></Button>
-                          <Button color="secondary" className="Actionsppd"><i class="fa fa-pencil" aria-hidden="true"></i></Button>
-                          <div class="divider"/>
-                        </td>
                       </tr>
                     );
                   })}

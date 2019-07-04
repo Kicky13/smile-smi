@@ -9,7 +9,7 @@ import Gallerysmigallery from "../../components/Gallerysmigallery/Gallerysmigall
 import Advertisment from "../../components/AdvertisJurnal/Advertisjurnal";
 //import "../../asset/css/css-lates/dashboard.css";
 //import logo from "../../logo.svg";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton"; //Add this line Here
 import SosmedGallery from "../../components/SosmedGallery/Sosmedgallery";
 import CarouselGallery from "../../components/CarouselGallery/Caraouselgallery";
 class Page extends React.Component {
@@ -91,17 +91,7 @@ class Page extends React.Component {
             </div>
 
             <Footer />
-            <ScrollUpButton
-              ContainerClassName="ScrollUpButton__Container"
-              TransitionClassName="ScrollUpButton__Toggled"
-              StopPosition={0}
-              distance={100}
-              breakpoint={768}
-              EasingType="easeOutCubic"
-              AnimationDuration={2000}
-              style={{}}
-              ToggledStyle={{}}
-            />
+            <ScrollUpButton/>
           </>
         ) : null}
       </div>

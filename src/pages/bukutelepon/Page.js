@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbars/Navbar";
 import Footer from "../../components/Footer/FooterDash";
 import MDSpinner from "react-md-spinner";
 import DisplayTelepon from "../../components/DisplayTelepon/Displaytelepon";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton"; //Add this line Here
 class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -78,17 +78,7 @@ class Page extends React.Component {
             </div>
 
             <Footer />
-            <ScrollUpButton
-              ContainerClassName="ScrollUpButton__Container"
-              TransitionClassName="ScrollUpButton__Toggled"
-              StopPosition={0}
-              distance={100}
-              breakpoint={768}
-              EasingType="easeOutCubic"
-              AnimationDuration={2000}
-              style={{}}
-              ToggledStyle={{}}
-            />
+            <ScrollUpButton/>
           </>
         ) : null}
       </div>

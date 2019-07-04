@@ -6,21 +6,29 @@ import Moment from 'react-moment';
 class CommentReplayArticle extends React.Component {
   constructor(props) {
     super(props);
+    const userdata = JSON.parse(localStorage.getItem("userdata"));
     this.state = {
       isOpen: false,
       comments: [],
       isLiked: false,
       thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike',
+      buttonTitle: 'Like Article',
       komentar: {
         comment: "",
         id: this.props.match.params.id,
-        table: "article"
+        table: "article",
+        user_id: userdata.id
+      },
+      like: {
+        id: this.props.match.params.id,
+        user_id: userdata.id
       }
     };
   }
 
   componentDidMount() {
     const id = this.props.match.params.id;
+    const like = this.state.like;
     let isLiked;
     Http.defaults.headers.common[
       "Authorization"
@@ -45,7 +53,7 @@ class CommentReplayArticle extends React.Component {
         }
         return Promise.reject(data);
       });
-      Http.get(process.env.REACT_APP_SMILE_API + "api/article/isLikedArticle/" + id)
+      Http.post(process.env.REACT_APP_SMILE_API + "api/article/isLikedArticle", like)
         .then(res => {
           isLiked = res.data.isLiked;
           if (isLiked == 1) {
@@ -96,6 +104,7 @@ class CommentReplayArticle extends React.Component {
                 console.log("Failed");
             } else {
                 console.log("Success");
+                window.location.reload();
             }
         })
         .catch(err => {
@@ -115,11 +124,11 @@ class CommentReplayArticle extends React.Component {
 
   likeArticle(event) {
     event.preventDefault();
-    const id = this.props.match.params.id;
+    const id = this.state.like;
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
-    Http.get(process.env.REACT_APP_SMILE_API + "api/article/likearticle/" + id)
+    Http.post(process.env.REACT_APP_SMILE_API + "api/article/likearticle", id)
       .then(res => {
         console.log(res.data);
       })
@@ -140,36 +149,32 @@ class CommentReplayArticle extends React.Component {
     if (isLiked == 1) {
       this.setState({
         isLiked: 0,
-        thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike'
+        thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLike',
+        buttonTitle: 'Like Article'
       });
     } else {
       this.setState({
         isLiked: 1,
-        thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked'
+        thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked',
+        buttonTitle: 'Unlike Article'
       });
     }
 
   }
 
   render() {
+    console.log(this.state.komentar);
     const comments = this.state.comments;
     console.log(comments);
-    // if (this.state.isLiked == true) {
-    //   this.setState({
-    //     thumbStyle: 'fa fa-thumbs-up fa-2x thumbsLiked'
-    //   });
-    // }
     return (
       <div>
         <div className="comment">
           <h3 className>Comment
-            {/* <button className="ButtonNone" onClick={this.likeArticle.bind(this)}> */}
-            
               <i
               id="likeThumb"
               name="likeThumb" 
               className={this.state.thumbStyle} 
-              title="Like Article"
+              title={this.state.buttonTitle}
               onClick={this.likeArticle.bind(this)}
               ></i>
             {/* </button> */}

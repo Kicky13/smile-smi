@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Button, Table } from "reactstrap";
 import Http from "../../Http";
+
 class Displaysppd extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +39,6 @@ class Displaysppd extends React.Component {
 
   render() {
     const sppd = this.state.sppd;
-
     return (
       <div>
         <div className="user-sppd">

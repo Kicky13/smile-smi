@@ -90,6 +90,9 @@ class Navbar extends React.Component {
                   <ul className="nav navbar-nav">
                     {/*<a className="nav-brand" href="index.html"><img src={logoSmile} alt=""/></a>*/}
                     <li>
+                      <NavLink href={ process.env.REACT_APP_ROOT }><i className="fa fa-home"></i></NavLink>
+                    </li>
+                    <li>
                       <NavLink href={ process.env.REACT_APP_ROOT + "sminews" } >SMI News</NavLink>
                     </li>
                     <li>
@@ -102,7 +105,7 @@ class Navbar extends React.Component {
                       <NavLink href={ process.env.REACT_APP_ROOT + "gallery" }>SMI Gallery</NavLink>
                     </li>
                     <li>
-                      <NavLink href={ process.env.REACT_APP_ROOT + "jurnal" }>SMI Jurnal</NavLink>
+                      <NavLink href={ process.env.REACT_APP_ROOT + "jurnal" }>SMI Journal</NavLink>
                     </li>
                   <Button id="UncontrolledPopover" type="button" className="PopoverNav">
                     <i class="fa fa-user" aria-hidden="true"></i> <b>{this.props.userName}</b>

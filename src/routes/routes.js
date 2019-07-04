@@ -11,6 +11,7 @@ import Newsfeed from "../pages/newsfeed/";
 import Logout from "../pages/logout/";
 import Whatson from "../pages/whatson-today";
 
+import ContacUs from "../pages/contact-us";
 import NotFound from "../pages/notfound";
 import AdminArticle from "../pages/adminarticle-black/";
 import AdminCategory from "../pages/admincategory-black/";
@@ -78,6 +79,14 @@ const routes = [
         hide: true
     },
     {
+        path: "/contactus",
+        exact: true,
+        auth: true,
+        icon: "tim-icons icon-coin",
+        component: ContacUs,
+        hide: true
+    },
+    {
         path: "/article/:id",
         exact: true,
         auth: true,
@@ -102,7 +111,7 @@ const routes = [
         hide: true
     },
     {
-        path: "/listNewspaper",
+        path: "/listNewspaper/:id",
         exact: true,
         auth: true,
         icon: "tim-icons icon-coin",

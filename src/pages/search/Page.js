@@ -7,7 +7,7 @@ import Tab3 from "../../components/Tab3/Tab3";
 import Recentarticle from "../../components/RecentCArticle/Recentcarticle";
 import Advertisement from "../../components/Advertisement/Advertisement";
 import Pencarianpage from "../../components/Pencarianpage/Pencarianpage";
-import { CircleArrow as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton"; //Add this line Here
 
 class Page extends React.Component {
   constructor(props) {
@@ -95,17 +95,7 @@ class Page extends React.Component {
             <br />
             <br />
             <Footer />
-            <ScrollUpButton
-              ContainerClassName="ScrollUpButton__Container"
-              TransitionClassName="ScrollUpButton__Toggled"
-              StopPosition={0}
-              distance={100}
-              breakpoint={768}
-              EasingType="easeOutCubic"
-              AnimationDuration={2000}
-              style={{}}
-              ToggledStyle={{}}
-            />
+            <ScrollUpButton/>
           </>
         ) : null}
       </div>
