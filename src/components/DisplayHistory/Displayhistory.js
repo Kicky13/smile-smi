@@ -12,10 +12,11 @@ class Displayhistory extends React.Component {
   }
 
   componentDidMount() {
+    const userdata = JSON.parse(localStorage.getItem("userdata"))
     Http.defaults.headers.common [
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
-    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/kuotacuti")
+    Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/kuotacuti", userdata)
     .then(res => {
       this.setState({
         kuota: res.data.kuota
@@ -34,7 +35,7 @@ class Displayhistory extends React.Component {
         }
         return Promise.reject(data);
     });
-    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listsppd")
+    Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listsppd", userdata)
     .then(res => {
       this.setState({
         totalSppd: res.data.total

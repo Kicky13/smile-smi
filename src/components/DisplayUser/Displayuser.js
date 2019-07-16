@@ -13,11 +13,12 @@ class Displayuser extends React.Component {
   }
 
   componentDidMount() {
+    const userdata = JSON.parse(localStorage.getItem("userdata"));
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
 
-    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/profile")
+    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/profile/" + userdata.mk_nopeg)
     .then(res => {
       this.setState({
         user: res.data.user

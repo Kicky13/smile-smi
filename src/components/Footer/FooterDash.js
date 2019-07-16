@@ -110,9 +110,9 @@ class Footer extends React.Component {
                     &nbsp;
                     </li>
                   </ul>
-                  <h4></h4>
+                  <h4>Contact Us</h4>
                   <ul>
-                  <NavLink href="#"></NavLink>
+                  <NavLink href={ process.env.REACT_APP_ROOT + "contactus" } >Contact Us</NavLink>
                   </ul>
                 </div>
                 {/*  */}

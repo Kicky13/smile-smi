@@ -24,17 +24,23 @@
   height: 550px;
 
 }
+.BigImg .item-overlay.top p{
+  font-size: 14px;
+}
 
 .HeaderNews:hover .item-overlay.top {
   top: 0;
 }
+.HeaderNews.BigImg:hover .item-overlay.top {
+  top: 40%;
+}
 
 .HeaderNews .item-overlay.top{
-  top:75%;
+  top:77%;
 }
 
 .BigImg .item-overlay.top{
-  top:90%;
+  top:84%;
 }
 
 .Biography h2 {

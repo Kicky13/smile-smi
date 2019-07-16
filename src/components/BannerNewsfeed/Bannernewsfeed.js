@@ -13,6 +13,8 @@ class Bannernewsfeed extends React.Component {
       isOpen: false,
       article: [],
       comments: [],
+      comment: "",
+      like: "",
       tags: [],
       liked: false
     };
@@ -25,12 +27,16 @@ class Bannernewsfeed extends React.Component {
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
     //latest article
-    Http.get(process.env.REACT_APP_SMILE_API + "api/newsfeed/detail/" + id)
+    Http.get(
+      process.env.REACT_APP_SMILE_API + "api/newsfeed/detail/" + id
+    )
       .then(res => {
         this.setState({
           article: res.data.detail,
           comments: res.data.comments,
-          tags: res.data.tag
+          tags: res.data.tag,
+          like: res.data.like,
+          comment: res.data.jumlah_comment
         });
       })
       .catch(err => {
@@ -47,11 +53,9 @@ class Bannernewsfeed extends React.Component {
         }
         return Promise.reject(data);
       });
-
-
   }
   render() {
-    const article = this.state.article;
+    const { article, like, comment } = this.state;
     const tags = this.state.tags.map((tagMapped, index) => {
       return (
           <NavLink>{tagMapped.name}</NavLink>
@@ -75,19 +79,21 @@ class Bannernewsfeed extends React.Component {
                     <div className="col-md-8">
                       <div className="nama-notice">
                         <p>
-                        <Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment>
+                          <Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment>
                         </p>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="date-comment-view">
                         <p>
-                      <i class="material-icons">visibility</i>
+                          <i class="material-icons">visibility</i>
                           &nbsp; {anObjectMapped.viewed}{" "}
                           &nbsp;&nbsp;&nbsp;&nbsp;
-                      <i class="material-icons">comment</i>
-                          &nbsp; 0 &nbsp;
-                    </p>
+                          <i class="material-icons">comment</i>
+                          &nbsp; {comment} &nbsp;
+                          <i class="material-icons">thumb_up</i>
+                          &nbsp; {like} &nbsp;
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -107,7 +113,7 @@ class Bannernewsfeed extends React.Component {
                 <p>{Parser(anObjectMapped.content)}</p>
                 <br />
                 <div className="desc-tag">
-                <div className="col-md-12 col-sm-12">
+                  <div className="col-md-12 col-sm-12">
                   {tags}
                   </div>
                 </div>
@@ -115,7 +121,6 @@ class Bannernewsfeed extends React.Component {
             </>
           );
         })}
-
       </div>
     );
   }

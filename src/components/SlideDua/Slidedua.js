@@ -63,7 +63,7 @@ class SlideDua extends React.Component {
         <div className="content-latest-news">
           <div className="row">
               <div className="col-md-6">
-              <h2 style={{paddingLeft: '50px'}}>What's on today?</h2>
+              <h2 style={{paddingLeft: '10px'}}>What's on today?</h2>
               </div>
               <div className="col-md-6">
               <NavLink href={process.env.REACT_APP_ROOT + "whatson/1/1"}>
@@ -112,7 +112,7 @@ class SlideDua extends React.Component {
                         <NavLink href={process.env.REACT_APP_ROOT + "article/" + anObjectMapped.id}>
                           <Button className="view-more">
                             <p className="view-text">
-                              View more &nbsp;{" "}
+                              Read more &nbsp;{" "}
                               <i className="fas fa-arrow-alt-circle-right" />
                             </p>
                           </Button>

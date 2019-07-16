@@ -11,11 +11,11 @@ class Displaycuti extends React.Component {
   }
 
   componentDidMount() {
+    const userdata = JSON.parse(localStorage.getItem("userdata"));
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
-
-    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listcuti")
+    Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listcuti", userdata)
     .then(res => {
       this.setState({
         cuti: res.data.rows

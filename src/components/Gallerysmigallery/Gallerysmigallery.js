@@ -45,7 +45,7 @@ class Gallerysmigallery extends React.Component {
     return (
       <div>
         <div className="gallery">
-          <h2> Gallery</h2>
+          <h2>Album</h2>
           <div className="">
             <div className="row">
               {/*  */}

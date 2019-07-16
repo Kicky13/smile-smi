@@ -267,7 +267,7 @@ class SlideLimaFlat extends React.Component {
                                                                             href={process.env.REACT_APP_ROOT + "article/" + anObjectMapped.id}
                                                                           >
                                                                             <Button style={{marginLeft: '120px'}} className="button-overlay">
-                                                                              <p>View more &nbsp;</p>
+                                                                              <p>Read more &nbsp;</p>
                                                                             </Button>
                                                                           </NavLink>
                                                                         </div>
@@ -333,7 +333,7 @@ class SlideLimaFlat extends React.Component {
                                                                             href={process.env.REACT_APP_ROOT + "article/" + anObjectMapped.id}
                                                                           >
                                                                             <Button style={{marginLeft: '120px'}} className="button-overlay">
-                                                                              <p>View more &nbsp;</p>
+                                                                              <p>Read more &nbsp;</p>
                                                                             </Button>
                                                                           </NavLink>
                                                                         </div>
@@ -399,7 +399,7 @@ class SlideLimaFlat extends React.Component {
                                                                             href={process.env.REACT_APP_ROOT + "article/" + anObjectMapped.id}
                                                                           >
                                                                             <Button style={{marginLeft: '120px'}} className="button-overlay">
-                                                                              <p>View more &nbsp;</p>
+                                                                              <p>Read more &nbsp;</p>
                                                                             </Button>
                                                                           </NavLink>
                                                                         </div>
@@ -465,7 +465,7 @@ class SlideLimaFlat extends React.Component {
                                                                             href={process.env.REACT_APP_ROOT + "article/" + anObjectMapped.id}
                                                                           >
                                                                             <Button style={{marginLeft: '120px'}} className="button-overlay">
-                                                                              <p>View more &nbsp;</p>
+                                                                              <p>Read more &nbsp;</p>
                                                                             </Button>
                                                                           </NavLink>
                                                                         </div>

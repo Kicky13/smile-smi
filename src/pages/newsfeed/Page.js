@@ -1,51 +1,66 @@
 import React from "react";
 import Tab3 from "../../components/Tab3/Tab3";
-import adv from "../../asset/img/adv.png";
 import * as actions from "../../store/actions";
 import Navbar from "../../components/Navbars/Navbar";
 import Footer from "../../components/Footer/FooterDash";
 import Category from "../../components/CategoryArticle/category";
 import Videoarticle from "../../components/VideoArticle/Videoarticle";
 import Recentarticle from "../../components/RecentCArticle/Recentcarticle";
-import BannerNewsfeed from "../../components/BannerNewsfeed/Bannernewsfeed";
+import Bannernewsfeed from "../../components/BannerNewsfeed/Bannernewsfeed";
 import Commentreplaynewsfeed from "../../components/CommentReplayNewsfeed/Commentreplaynewsfeed";
 import Trendingarticle from "../../components/TrendingArticle/Trendingarticle";
 import Likearticle from "../../components/LikeArticle/Likearticle";
 import Http from "../../Http";
-// import Parser from 'html-react-parser';
-import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton"; //Add this line Here
-
-//import "../../asset/css/css-lates/dashboard.css";
-//import logo from "../../logo.svg";
+import LazyLoad from "react-lazy-load";
+import ProgressiveImage from "react-progressive-image-loading";
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButton";
 
 class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
-      newsfeed: [],
-      comments: []
+      article: [],
+      comments: [],
+      advertise: [],
+      articleid: {
+        id: this.props.match.params.id
+      }
     };
     this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount() {
-    const id = this.props.match.params.id;
+    const { articleid } = this.state;
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
-    //latest article
-    Http.get(
-      process.env.REACT_APP_SMILE_API + "api/newsfeed/detail/" + id
-    )
+    //advertise limit 1
+    Http.get(process.env.REACT_APP_SMILE_API + "api/advertise/one")
       .then(res => {
         this.setState({
-          newsfeed: res.data.detail,
-          comments: res.data.comments
+          advertise: res.data.advertise
         });
       })
       .catch(err => {
-        const statusCode = err.response.status;
+        const statusCode = '';
+        const data = {
+          error: null,
+          statusCode
+        };
+        if (statusCode === 401 || statusCode === 422) {
+          // status 401 means unauthorized
+          // status 422 means unprocessable entity
+          data.error = err.response.data.message;
+        }
+        return Promise.reject(data);
+      });
+    Http.post(process.env.REACT_APP_SMILE_API + "api/article/addView", articleid)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        const statusCode = '';
         const data = {
           error: null,
           statusCode
@@ -65,6 +80,9 @@ class Page extends React.Component {
   }
 
   render() {
+    const advertise = this.state.advertise;
+    console.log("advertise");
+    console.log(advertise);
     //onsole.log(this.props);
 
     // const settings = {
@@ -77,6 +95,9 @@ class Page extends React.Component {
     if (this.props.match.params.id == null) {
       alert("tak ada");
     }
+    if (this.state.article.length > 0) {
+      console.log(this.state.article[0].title);
+    }
 
     // const article = this.state.article;
 
@@ -85,33 +106,64 @@ class Page extends React.Component {
         {
           <Navbar
             {...this.props}
+            activeBar="news"
             // brandText="Dashboard"
             // toggleSidebar={this.toggleSidebar}
             // sidebarOpened={this.state.sidebarOpened}
           />
         }
+        <div className="delimiter" />
+
         <div className="container-fluid">
           <div className="row">
-          <div className="col-md-1 col-sm-1" />
-            <div className="col-md-7 col-sm-7" style={{marginTop:100}}>
-              <BannerNewsfeed {...this.props} />
+            <div className="col-md-1 col-sm-1" />
+            <div className="col-md-7 col-sm-7">
+              <Bannernewsfeed {...this.props} />
               <Commentreplaynewsfeed {...this.props} />
+              <br />
               <Trendingarticle />
             </div>
 
-            <div className="col-md-4 col-sm-4" style={{marginTop:150}}>
+            <div className="col-md-4 col-sm-4">
+            <br />
+            <br />
+            <br />
               <Tab3 />
               <Category />
               <Videoarticle />
               <div className="advertisment">
-                <img src={adv} alt="" />
+                {advertise.map((anObjectMapped, index) => {
+                  return (
+                    <LazyLoad>
+                      <ProgressiveImage
+                        preview={
+                          "https://smile.semenindonesia.com/" +
+                          anObjectMapped.gambar
+                        }
+                        src={
+                          "https://smile.semenindonesia.com/" +
+                          anObjectMapped.gambar
+                        }
+                        render={(src, style) => (
+                          <img
+                            decoding="async"
+                            src={src}
+                            alt=""
+                            style={style}
+                          />
+                        )}
+                      />
+                    </LazyLoad>
+                  );
+                })}
               </div>
               <Recentarticle />
             </div>
 
             <div className="container-fluid">
               <div className="row">
-                <div className="col-md-12">
+                <div className="col-md-1" />
+                <div className="col-md-11">
                   <Likearticle />
                   {/*  */}
                 </div>
@@ -121,6 +173,7 @@ class Page extends React.Component {
 
           {/*  */}
         </div>
+        <p>&nbsp;</p>
 
         <Footer />
         <ScrollUpButton/>

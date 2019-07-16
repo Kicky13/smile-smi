@@ -59,6 +59,7 @@ class Page extends React.Component {
             {
               <Navbar
                 {...this.props}
+                activeBar="activity"
                 // brandText="Dashboard"
                 // toggleSidebar={this.toggleSidebar}
                 // sidebarOpened={this.state.sidebarOpened}
@@ -94,7 +95,6 @@ class Page extends React.Component {
                 </div>
               </div>
             </div>
-
             <Footer />
             <ScrollUpButton/>
           </>

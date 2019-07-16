@@ -75,7 +75,7 @@ class Latestvideosmi extends React.Component {
             <div className="col-md-3">
             <h2>Latest Video</h2>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-9">
             <NavLink href={process.env.REACT_APP_ROOT + "listvideo"}>
               <Button className="BtnSideWhat">
                 View More &nbsp; <i className="fas fa-arrow-alt-circle-right" />

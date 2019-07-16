@@ -103,15 +103,15 @@ class Articlesminews extends React.Component {
               </LazyLoad>
 
                 <div className="item-overlay top">
-                  <h4>{anObjectMapped.title}</h4>
-                  <br />
-                  <p><Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment></p>
-                  <br />
+                  <h4 style={{fontSize: '28px'}}>{anObjectMapped.title}</h4>
+                  
+                  <p style={{fontSize: '14px'}}><Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment></p>
+                  
                   {Parser(anObjectMapped.content.substring(0, 500))}
                   <NavLink href={"/dev/smile/article/" + anObjectMapped.id}>
                     <Button className="view-more">
                       <p className="view-text">
-                        View more &nbsp;{" "}
+                        Read more &nbsp;{" "}
                         <i className="fas fa-arrow-alt-circle-right" />
                       </p>
                     </Button>
@@ -157,7 +157,7 @@ class Articlesminews extends React.Component {
                 <NavLink href={"/dev/smile/article/" + anObjectMapped.id}>
                   <Button className="view-more lima">
                     <p className="view-text">
-                      View more &nbsp;{" "}
+                      Read more &nbsp;{" "}
                       <i className="fas fa-arrow-alt-circle-right" />
                     </p>
                   </Button>

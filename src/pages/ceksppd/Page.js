@@ -3,6 +3,7 @@ import * as actions from "../../store/actions";
 import Navbar from "../../components/Navbars/Navbar";
 import Footer from "../../components/Footer/FooterDash";
 import MDSpinner from "react-md-spinner";
+import SMIOfficeLink from "../../components/SMIOfficeLink/SMIOfficeLink";
 import DisplayUser from "../../components/DisplayUser/Displayuser";
 import DisplayCuti from "../../components/DisplayCuti/Displaycuti";
 import DisplaySppd from "../../components/DisplaySppd/Displaysppd";
@@ -77,6 +78,9 @@ class Page extends React.Component {
                   {/*  */}
 
                   {/*  */}
+                </div>
+                <div className="col-md-12 col-sm-12">
+                <SMIOfficeLink />
                 </div>
               </div>
 

@@ -58,6 +58,7 @@ class Page extends React.Component {
                         {
                             <Navbar
                                 {...this.props}
+                                activeBar="journal"
                                 // brandText="Dashboard"
                                 // toggleSidebar={this.toggleSidebar}
                                 // sidebarOpened={this.state.sidebarOpened}

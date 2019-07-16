@@ -12,11 +12,12 @@ class Displaysppd extends React.Component {
   }
 
   componentDidMount() {
+    const userdata = JSON.parse(localStorage.getItem("userdata"));
     Http.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
 
-    Http.get(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listsppd")
+    Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listsppd", userdata)
     .then(res => {
       this.setState({
         sppd: res.data.rows

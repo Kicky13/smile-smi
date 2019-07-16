@@ -66,17 +66,18 @@ class Page extends React.Component {
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-1 col-sm-1" />
-            <div className="col-md-7 col-sm-7">
+            <div className="col-md-2 col-sm-2" />
+            <div className="col-md-8 col-sm-8">
               <ContactUs {...this.props} />
             </div>
+            <div className="col-md-2 col-sm-2" />
 
-            <div className="col-md-4 col-sm-4">
+            {/* <div className="col-md-4 col-sm-4">
             <br />
             <br />
             <br />
               <Tab3 />
-              {/* <Videoarticle /> */}
+              <Videoarticle />
               <div className="advertisment">
                 {advertise.map((anObjectMapped, index) => {
                   return (
@@ -103,8 +104,8 @@ class Page extends React.Component {
                   );
                 })}
               </div>
-              {/* <Recentarticle /> */}
-            </div>
+              <Recentarticle />
+            </div> */}
 
             <div className="container-fluid">
               <div className="row">

@@ -58,14 +58,37 @@ class Navbar extends React.Component {
       );
     } else {
         return (
-          <div className="col-md-12"></div>
+          <div className="col-md-12" style={{padding: '0px'}}></div>
         );
     }
   }
 
   render() {
     console.log(this.props);
-
+    const active = this.props.activeBar;
+    const activeBar = {
+      home: "",
+      news: "",
+      office: "",
+      activity: "",
+      gallery: "",
+      journal: ""
+    }
+    if (typeof active !== "undefined") {
+      if (active == "home") {
+        activeBar['home'] = 'active';
+      } else if (active == "news") {
+        activeBar['news'] = 'active';
+      } else if (active == "office") {
+        activeBar['office'] = 'active';
+      } else if (active == "activity") {
+        activeBar['activity'] = 'active';
+      } else if (active == "gallery") {
+        activeBar['gallery'] = 'active';
+      } else {
+        activeBar['journal'] = 'active';
+      }
+    }
     if (this.state.searching) {
       return <Redirect to={'/search/' + this.state.searchBox} />
     }
@@ -77,45 +100,42 @@ class Navbar extends React.Component {
             <div className="container">
             
             <div className="row">
-              <div className="col-md-2">
+              <div className="col-md-2" >
                 <a className="nav-brand" href={ process.env.REACT_APP_ROOT }>
                   <img className="nav-brand" src={logoSmile} alt="" />
                 </a>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3" style={{padding: '0px'}}>
               {this.searchBar()}
               </div>
-              <div className="col-md-7">
+              <div className="col-md-7" style={{padding: '0px'}}>
                 <div className="collapse navbar-collapse navbar-right navbar-ex1-collapse">
                   <ul className="nav navbar-nav">
-                    {/*<a className="nav-brand" href="index.html"><img src={logoSmile} alt=""/></a>*/}
-                    <li>
-                      <NavLink href={ process.env.REACT_APP_ROOT }><i className="fa fa-home"></i></NavLink>
+                    <li className={activeBar.home}>
+                      <NavLink href={ process.env.REACT_APP_ROOT }><i className="fa fa-home" style={{fontSize: '18px'}}></i></NavLink>
                     </li>
-                    <li>
+                    <li className={activeBar.news}>
                       <NavLink href={ process.env.REACT_APP_ROOT + "sminews" } >SMI News</NavLink>
                     </li>
-                    <li>
+                    <li className={activeBar.office}>
                       <NavLink href={ process.env.REACT_APP_ROOT + "ceksppd" } >SMI Office</NavLink>
                     </li>
-                    <li>
+                    <li className={activeBar.activity}>
                       <NavLink href={ process.env.REACT_APP_ROOT + "smiactivity" }>SMI Activity</NavLink>
                     </li>
-                    <li>
+                    <li className={activeBar.gallery}>
                       <NavLink href={ process.env.REACT_APP_ROOT + "gallery" }>SMI Gallery</NavLink>
                     </li>
-                    <li>
+                    <li className={activeBar.journal}>
                       <NavLink href={ process.env.REACT_APP_ROOT + "jurnal" }>SMI Journal</NavLink>
                     </li>
-                  <Button id="UncontrolledPopover" type="button" className="PopoverNav">
-                    <i class="fa fa-user" aria-hidden="true"></i> <b>{this.props.userName}</b>
+                  <Button id="UncontrolledPopover" type="button" className="PopoverNav" style={{width: '100px'}}>
+                    <i class="fa fa-user" aria-hidden="true" style={{fontSize: '18px'}}></i>
                   </Button>
                   <UncontrolledPopover placement="bottom" target="UncontrolledPopover" className="PopoverLayer">
-                    {/* <PopoverHeader>
-                      <NavLink href={process.env.REACT_APP_ROOT + "ceksppd"} className="PopoverHead">
-                        <h6 className="h4white" align="center"><i class="fa fa-folder" aria-hidden="true"></i> <b>SPPD</b></h6>
-                      </NavLink>
-                    </PopoverHeader> */}
+                    <PopoverHeader>
+                        <h6 className="h4white" align="center"><b>{this.props.userName}</b></h6>
+                    </PopoverHeader>
                     <PopoverBody>
                       <NavLink href="/" onClick={e => this.handleLogout(e)}>
                         <h6 className="h4white" align="center"><i class="fa fa-sign-out" aria-hidden="true"></i> <b>Logout</b></h6>

@@ -61,6 +61,7 @@ class Page extends React.Component {
             {
               <Navbar
                 {...this.props}
+                activeBar="journal"
                 // brandText="Dashboard"
                 // toggleSidebar={this.toggleSidebar}
                 // sidebarOpened={this.state.sidebarOpened}
@@ -78,9 +79,8 @@ class Page extends React.Component {
                 </div>
                 <div className="col-md-4 col-sm-4">
                   {/*  */}
-                  <br />
-                  <br />
-                  <Calendarjurnal />
+                  
+                  {/* <Calendarjurnal /> */}
                   {/*  */}
                   <br />
                   <Magazinejurnal />
