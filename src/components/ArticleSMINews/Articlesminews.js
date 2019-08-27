@@ -105,8 +105,8 @@ class Articlesminews extends React.Component {
                 <div className="item-overlay top">
                   <h4 style={{fontSize: '28px'}}>{anObjectMapped.title}</h4>
                   
-                  <p style={{fontSize: '14px'}}><Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment></p>
-                  
+                  <p style={{fontSize: '16px'}}><Moment format="D MMM YYYY">{anObjectMapped.posted_date}</Moment></p>
+                  <br />
                   {Parser(anObjectMapped.content.substring(0, 500))}
                   <NavLink href={"/dev/smile/article/" + anObjectMapped.id}>
                     <Button className="view-more">

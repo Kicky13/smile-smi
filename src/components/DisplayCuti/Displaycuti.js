@@ -5,7 +5,8 @@ class Displaycuti extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cuti: []
+      cuti: [],
+      errorData: ""
     };
     //this.handleLogout = this.handleLogout.bind(this);
   }
@@ -17,9 +18,15 @@ class Displaycuti extends React.Component {
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
     Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listcuti", userdata)
     .then(res => {
-      this.setState({
-        cuti: res.data.rows
-      });
+      if (typeof res.data.rows === "undefined") {
+        this.setState({
+          errorData: "Data has error occured"
+        });
+      } else {
+        this.setState({
+          cuti: res.data.rows
+        });
+      }
     })
     .catch(err => {
       const statusCode = err.response.status;
@@ -38,7 +45,11 @@ class Displaycuti extends React.Component {
 
   render() {
     const cuti = this.state.cuti;
-
+    const error = this.state.errorData;
+    const styleError = {
+      color: "#ed0505",
+      textAlign: 'center',
+    }
     return (
       <div>
         <div className="user-sppd">
@@ -46,9 +57,6 @@ class Displaycuti extends React.Component {
           <div className="col-md-10">
           <h2>CUTI</h2>
           </div>
-          {/* <div className="col-md-2">
-          <Button color="primary" className="TambahSppd">Tambah</Button>{' '}
-          </div> */}
         </div>
 
           <div className="row">
@@ -63,7 +71,7 @@ class Displaycuti extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {cuti.map((anObjectMapped, index) => {
+                  {(error == "") ? cuti.map((anObjectMapped, index) => {
                     return (
                       <tr>
                         <th scope="row">{index + 1}</th>
@@ -72,7 +80,11 @@ class Displaycuti extends React.Component {
                         <td>{anObjectMapped.ct_to}</td>
                       </tr>
                     );
-                  })}
+                  }):
+                    <tr>
+                      <td style={styleError} colSpan="4">Data has error occured</td>
+                    </tr>
+                  }
                 </tbody>
               </Table>
               </div>

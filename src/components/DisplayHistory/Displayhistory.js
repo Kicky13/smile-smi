@@ -18,9 +18,17 @@ class Displayhistory extends React.Component {
     ] = `Bearer ${localStorage.getItem("jwt_token")}`;
     Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/kuotacuti", userdata)
     .then(res => {
-      this.setState({
-        kuota: res.data.kuota
-      });
+      if (typeof res.data.kuota === "undefined" || res.data.kuota === "null") {
+        this.setState({
+          kuota: {
+            sisa: 0
+          }
+        })
+      } else {
+        this.setState({
+          kuota: res.data.kuota
+        });
+      }
     })
     .catch(err => {
       const statusCode = err.response.status;
@@ -37,9 +45,15 @@ class Displayhistory extends React.Component {
     });
     Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listsppd", userdata)
     .then(res => {
-      this.setState({
-        totalSppd: res.data.total
-      })
+      if (res.data.total) {
+        this.setState({
+          totalSppd: 0
+        })  
+      } else {
+        this.setState({
+          totalSppd: res.data.total
+        });
+      }
     })
     .catch(err => {
       const statusCode = err.response.status;
@@ -60,7 +74,6 @@ class Displayhistory extends React.Component {
     const kuota = this.state.kuota;
     const total = this.state.totalSppd;
     const data = {
-
     labels: [
   		'Cuti',
   		'Kuota'

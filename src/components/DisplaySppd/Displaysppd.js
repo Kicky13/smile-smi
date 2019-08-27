@@ -6,7 +6,8 @@ class Displaysppd extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sppd: []
+      sppd: [],
+      errorData: ""
     };
     //this.handleLogout = this.handleLogout.bind(this);
   }
@@ -19,9 +20,15 @@ class Displaysppd extends React.Component {
 
     Http.post(process.env.REACT_APP_SMILE_API + "api/APIHRIS/listsppd", userdata)
     .then(res => {
-      this.setState({
-        sppd: res.data.rows
-      })
+      if (typeof res.data.rows === 'undefined') {
+        this.setState({
+          errorData: "Data has error occurred"
+        });
+      } else {
+        this.setState({
+          sppd: res.data.rows
+        });
+      }
     })
     .catch(err => {
       const statusCode = err.response.status;
@@ -40,6 +47,11 @@ class Displaysppd extends React.Component {
 
   render() {
     const sppd = this.state.sppd;
+    const error = this.state.errorData;
+    const styleError = {
+      color: "#ed0505",
+      textAlign: 'center',
+    }
     return (
       <div>
         <div className="user-sppd">
@@ -64,11 +76,10 @@ class Displaysppd extends React.Component {
                     <th>Penginapan</th>
                     <th>Berangkat</th>
                     <th>Pulang</th>
-                    {/* <th>Status</th> */}
                   </tr>
                 </thead>
                 <tbody>
-                  {sppd.map((anObjectMapped, index) => {
+                  {(error == "") ? sppd.map((anObjectMapped, index) => {
                     return (
                       <tr>
                         <th scope="row">{index + 1}</th>
@@ -78,10 +89,34 @@ class Displaysppd extends React.Component {
                         <td>{anObjectMapped.TKTXT}</td>
                         <td>{anObjectMapped.PDATV}</td>
                         <td>{anObjectMapped.PDATB}</td>
-                        {/* <td><Button color="success">Approved</Button>{' '}</td> */}
                       </tr>
                     );
-                  })}
+                  }) :
+                  <tr>
+                    <td style={styleError} colSpan="7">Data has error occured</td>
+                  </tr>
+                  }
+                  {/* {sppd.map((anObjectMapped, index) => {
+                    if(error === "undefined") {
+                      return (
+                        <tr>
+                          <th scope="row">{index + 1}</th>
+                          <td>{anObjectMapped.KUNDE}</td>
+                          <td>{anObjectMapped.RETXT}</td>
+                          <td>{anObjectMapped.ZORT1}</td>
+                          <td>{anObjectMapped.TKTXT}</td>
+                          <td>{anObjectMapped.PDATV}</td>
+                          <td>{anObjectMapped.PDATB}</td>
+                        </tr>
+                      );
+                    } else {
+                      return (
+                        <tr>
+                          <p>Data has error occured</p>
+                        </tr>
+                      );
+                    }
+                  })} */}
                 </tbody>
               </Table>
               </div>
