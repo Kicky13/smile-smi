@@ -127,7 +127,7 @@
     "glob-all": "^3.1.0",
     "purgecss-webpack-plugin": "^1.4.0",
     "react-ckeditor-component": "^1.1.0",
-    "terser": "^3.14.1"
+    "terser": "^4.8.1"
   },
   "jest": {
     "collectCoverageFrom": [
